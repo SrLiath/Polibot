@@ -1,0 +1,22 @@
+{
+  "name": "polibot",
+  "version": "0.0.1",
+  "description": "Automatizando processos",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrLiath/Polibot.git"
+  },
+  "keywords": [
+    "automação"
+  ],
+  "author": "SrLiath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SrLiath/Polibot/issues"
+  },
+  "homepage": "https://github.com/SrLiath/Polibot#readme"
+}
