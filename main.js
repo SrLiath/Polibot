@@ -1,27 +1,32 @@
-const robot = require('robotjs');
-const fs = require('fs-extra');
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
 
-let commands = [];
+function createWindow() {
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    frame: false, //remove border
+    webPreferences: {
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'preload.js')
+    }
+  });
 
-function recordCommand() {
-  const command = {
-    mouse: robot.getMousePos(),
-    keyboard: robot.keyToggle,
-  };
-  commands.push(command);
+  win.loadFile('windows/main.html');
 }
 
-function saveCommandsToFile() {
-  const fileName = 'bot.exe';
-  fs.writeJSONSync(fileName, commands);
-  console.log(`Comandos gravados no arquivo: ${fileName}`);
-}
+app.whenReady().then(() => {
+  createWindow();
 
-console.log('Gravador de comandos iniciado. Pressione Ctrl+C para parar.');
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
+    }
+  });
+});
 
-setInterval(recordCommand, 100); // Grava um comando a cada 100ms
-
-process.on('SIGINT', () => {
-  saveCommandsToFile();
-  process.exit();
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });

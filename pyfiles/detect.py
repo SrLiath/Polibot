@@ -1,3 +1,4 @@
+import argparse
 from pynput import mouse, keyboard
 import json
 
@@ -52,7 +53,6 @@ def on_release(key):
     if key == keyboard.Key.esc:
         return False
 
-
 print('Gravador de comandos iniciado. Pressione Esc para parar.')
 
 # Listener mouse
@@ -70,12 +70,16 @@ keyboard_listener.start()
 # wait the user press the esc button to exit  
 keyboard_listener.join()
 
-# ask a name file
-filename = 'json_bots/'
-filename += input('Digite o nome do arquivo para salvar os comandos: ')
+# Parse command line arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('-n', '--name', help='Nome do arquivo para salvar os comandos')
+args = parser.parse_args()
 
-# save the commands in a json file
-filename += '.json'
+# Construct filename
+filename = 'json_bots/'
+filename += args.name + '.json'
+
+# Save the commands in a JSON file
 with open(filename, 'w') as file:
     json.dump(commands, file)
 
