@@ -109,7 +109,7 @@
         </div>
     
         <audio id="countdownSound">
-          <source src="issets/plim.mp3" type="audio/mp3">
+          <source src="issets/song/plim.mp3" type="audio/mp3">
         </audio>
     </div>
     <div id="tela2" class="d-none">
@@ -143,7 +143,7 @@
       var countdown = 3;
       var countdownInterval = setInterval(function() {
         if (countdown === 0) {
-            
+            //aqui fica pra fazer a conexão com o arquivo no nodekernel chamado detect
           clearInterval(countdownInterval);
           playCountdownSound();
           
