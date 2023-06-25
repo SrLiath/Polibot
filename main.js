@@ -8,11 +8,13 @@ function createWindow() {
     frame: false, //remove border
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, './windows/preload.js')
     }
   });
 
-  win.loadFile('windows/main.html');
+  win.loadFile('./windows/index.html');
+
+  // win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
