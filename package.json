@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/SrLiath/Polibot#readme",
   "devDependencies": {
+    "@types/electron": "^1.6.10",
     "electron": "^25.2.0"
   },
   "dependencies": {
