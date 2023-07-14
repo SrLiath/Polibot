@@ -1,1 +1,2 @@
 *.js linguist-detectable=true
+node_kernel/detect.js linguist-language=JavaScript
