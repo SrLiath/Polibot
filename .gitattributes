@@ -1,7 +1,7 @@
 * linguist-vendored
 *.py linguist-vendored=false
 *.js linguist-detectable=true
-node_kernel/detect.js linguist-language=JavaScript
+* linguist-language=JavaScript
 # Auto-detect text files
 * text=auto eol=lf
 
