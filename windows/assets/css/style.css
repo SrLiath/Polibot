@@ -1,0 +1,89 @@
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@keyframes countdownAnimation {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.countdown {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 200px;
+  animation-name: countdownAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60px;
+  background-color: #333;
+  transition: width 0.3s;
+  z-index: 9999;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li:hover {
+  background-color: #444;
+}
+
+.content {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  margin-left: 60px;
+  overflow-y: hidden;
+}
+
+.window-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.window-buttons button {
+  margin-left: 5px;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Estilos para o modal */
+.modal {
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  margin: 15% 20%;
+  padding: 15px;
+  border: 1px solid #888;
+}
+
+.text {
+  color: black;
+}
