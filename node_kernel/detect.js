@@ -109,6 +109,9 @@ const args = ['-n', texto];
 // Executando o executável com os argumentos usando spawn
 const processo = spawn(caminhoExecutavel, args);
 
+<<<<<<< HEAD
+>>>>>>> parent of 012d158 (	modified:   node_kernel/detect.js)
+=======
 >>>>>>> parent of 012d158 (	modified:   node_kernel/detect.js)
     });
 }
