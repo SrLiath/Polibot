@@ -27,6 +27,9 @@ function createWindow() {
   });
 
   win.loadFile('windows/main.html');
+<<<<<<< HEAD
+>>>>>>> parent of 636fe55 (Merge branch 'main' of https://github.com/SrLiath/Polibot)
+=======
 >>>>>>> parent of 636fe55 (Merge branch 'main' of https://github.com/SrLiath/Polibot)
 }
 electron_1.app.whenReady().then(function () {
@@ -50,4 +53,7 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
+<<<<<<< HEAD
+>>>>>>> parent of 636fe55 (Merge branch 'main' of https://github.com/SrLiath/Polibot)
+=======
 >>>>>>> parent of 636fe55 (Merge branch 'main' of https://github.com/SrLiath/Polibot)
