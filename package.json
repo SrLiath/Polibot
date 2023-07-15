@@ -61,7 +61,6 @@
     "json-buffer": "^3.0.1",
     "json-stringify-safe": "^5.0.1",
     "jsonfile": "^4.0.0",
-    "keypress": "^0.2.1",
     "keyv": "^4.5.2",
     "lowercase-keys": "^2.0.0",
     "lru-cache": "^6.0.0",
