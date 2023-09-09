@@ -10,11 +10,12 @@ function createWindow() {
     frame: false,
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js')
+      // preload: path.join(__dirname, 'preload.js')
     }
   });
+  // win.webContents.openDevTools();
 
-  win.loadFile('windows/main.html');
+  win.loadFile('./windows/index.html');
 }
 
 electron_1.app.whenReady().then(function () {
