@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import argparse
 from pynput import mouse, keyboard
 import json
@@ -53,34 +54,50 @@ def on_release(key):
     if key == keyboard.Key.esc:
         return False
 
-print('Gravador de comandos iniciado. Pressione Esc para parar.')
+def gravar(nome, call, type):
+    print('Gravador de comandos iniciado. Pressione Esc para parar.')
 
-# Listener mouse
-mouse_listener = mouse.Listener(
-    on_move=on_move,
-    on_click=on_click)
-mouse_listener.start()
+    
+    mouse_listener = mouse.Listener(
+        on_move=on_move,
+        on_click=on_click)
+    mouse_listener.start()
+    
+    keyboard_listener = keyboard.Listener(
+        on_press=on_press,
+        on_release=on_release)
+    keyboard_listener.start()
+    
+    keyboard_listener.join()
+    filename = 'json_bots/'
+    filename += nome + '.json'
 
-# Listener keyboard
-keyboard_listener = keyboard.Listener(
-    on_press=on_press,
-    on_release=on_release)
-keyboard_listener.start()
 
-# wait the user press the esc button to exit  
-keyboard_listener.join()
 
-# Parse command line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument('-n', '--name', help='Nome do arquivo para salvar os comandos')
-args = parser.parse_args()
+    with open('json_bots\\bots.json', 'r', encoding='utf-8') as arquivo_json:
+        dados_existente = json.load(arquivo_json)
 
-# Construct filename
-filename = 'json_bots/'
-filename += args.name + '.json'
+    if type == 0:
+        caller = "key"
+    elif type == 1:
+        caller = "voice"
 
-# Save the commands in a JSON file
-with open(filename, 'w') as file:
-    json.dump(commands, file)
+    botJson = {
+        "path": filename,
+        "botname": nome,
+        "call": {
+            caller: call
+        }
+    }
 
-print(f'Comandos gravados no arquivo: {filename}')
+    # Adicione o novo objeto à lista existente
+    dados_existente.append(botJson)
+    # Escreva os dados atualizados de volta para o arquivo JSON
+    with open('json_bots\\bots.json', 'w', encoding='utf-8') as arquivo_json:
+        json.dump(dados_existente, arquivo_json, indent=4)
+
+    # Salve os comandos em um arquivo JSON
+    with open(filename, 'w', encoding='utf-8') as file:
+        json.dump(commands, file, indent=4)
+
+    print(f'Comandos gravados no arquivo: {filename}')

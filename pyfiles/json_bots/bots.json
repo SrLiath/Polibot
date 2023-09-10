@@ -1,0 +1,9 @@
+[
+    {
+        "path": "json_bots/teste.json",
+        "botname": "teste",
+        "call": {
+            "voice": "teste"
+        }
+    }
+]
