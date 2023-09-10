@@ -3,7 +3,6 @@ Automação de processos
 ##COMO CONECTAR A BACK COM A FRONT
     faça as requisições ali em baixo para gravar, você pode analisar os bots dentro de json_bots/bots.json
 
-===
 pyfiles
 ===
 - Init.py:
