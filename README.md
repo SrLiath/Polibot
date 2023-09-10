@@ -13,9 +13,9 @@ json_bots
 - bots.json:
 Dados dos bots na onde são seu filepath, name e tipo de comando (voz ou teclado)
 
-´´´
+---
 comando curl para gravar bot:
 curl localhost:3452 -H "Option: gravar" -H "Name:{nome do bot}" -H "Key: {tecla que deve ser apertada com + as separando}"
 curl localhost:3452 -H "Option: gravar" -H "Name:{nome do bot}" -H "Voice: {Comando em voz que executa}"
 
-´´´
+---
