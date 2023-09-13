@@ -5,13 +5,13 @@ import json
 
 commands = []
 
-def on_move(x, y):
-    command = {
-        'type': 'move',
-        'x': x,
-        'y': y
-    }
-    commands.append(command)
+# def on_move(x, y):
+#     command = {
+#         'type': 'move',
+#         'x': x,
+#         'y': y
+#     }
+#     commands.append(command)
 
 def on_click(x, y, button, pressed):
     command = {
@@ -59,7 +59,7 @@ def gravar(nome, call, type):
 
     
     mouse_listener = mouse.Listener(
-        on_move=on_move,
+        # on_move=on_move,
         on_click=on_click)
     mouse_listener.start()
     

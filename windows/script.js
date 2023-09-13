@@ -39,10 +39,30 @@ function gravarBot() {
   function iniciarBot(){
     alert('Gravacao Iniciado! Aperte ESC quando finalizar!')
     minimizar()
+
+    const headers = new Headers({
+      'Option': 'gravar',
+      'Name': 'bot1',
+      'Voice': 'teste'
+    });
+
+    const requestOptions = {
+      method: 'GET',
+      headers: headers
+    };
+
+    fetch('http://localhost:3452', requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição');
+        }
+      return response.json();
+      })
+
   }
+    
 
 }
-
 
 
 function abrirTela(tela) {

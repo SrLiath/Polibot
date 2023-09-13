@@ -22,9 +22,8 @@ function createWindow() {
   electronIpcMain.on('window:minimize', () => {
     win.minimize();
   })
-  
-}
 
+}
 
 
 
