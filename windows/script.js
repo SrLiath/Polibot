@@ -8,7 +8,7 @@ function minimizar(){
 function gravarBot() {
   let countdown = 3;
 
-  function displayCountdown(count) {
+  const displayCountdown = (count) =>  {
     var countdownElement = $('<div>', {
       class: 'countdown',
       text: count
@@ -19,7 +19,7 @@ function gravarBot() {
     }, 1000);
   }
   
-  function playCountdownSound() {
+  const playCountdownSound = () => {
     var sound = document.getElementById('countdownSound');
     sound.play();
   }
