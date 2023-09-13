@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var electron_1 = require("electron");
 var path = require("path");
+const electronIpcMain = require('electron').ipcMain;
 
 function createWindow() {
   var win = new electron_1.BrowserWindow({
@@ -9,14 +10,23 @@ function createWindow() {
     height: 600,
     frame: false,
     webPreferences: {
-      nodeIntegration: true,
-      // preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js')
     }
   });
   // win.webContents.openDevTools();
 
   win.loadFile('./windows/index.html');
+
+  electronIpcMain.on('window:minimize', () => {
+    win.minimize();
+  })
+  
 }
+
+
+
 
 electron_1.app.whenReady().then(function () {
   createWindow();

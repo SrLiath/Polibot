@@ -1,36 +1,49 @@
 let isFullscreen = false;
 let fullscreenIcon = document.getElementById('fullscreen-icon');
 
+function minimizar(){
+  window.ipcRender.send('window:minimize')
+}
+
 function gravarBot() {
   let countdown = 3;
+
+  function displayCountdown(count) {
+    var countdownElement = $('<div>', {
+      class: 'countdown',
+      text: count
+    });
+    $('body').append(countdownElement);
+    setTimeout(function() {
+      countdownElement.remove();
+    }, 1000);
+  }
+  
+  function playCountdownSound() {
+    var sound = document.getElementById('countdownSound');
+    sound.play();
+  }
+
   let countdownInterval = setInterval(function() {
     if (countdown === 0) {
         //aqui fica pra fazer a conexão com o arquivo no nodekernel chamado detect
       clearInterval(countdownInterval);
       playCountdownSound();
-      
+      iniciarBot()
     } else {
       displayCountdown(countdown);
       countdown--;
     }
   }, 1000);
+
+  function iniciarBot(){
+    alert('Gravacao Iniciado! Aperte ESC quando finalizar!')
+    minimizar()
+  }
+
 }
 
-function displayCountdown(count) {
-  var countdownElement = $('<div>', {
-    class: 'countdown',
-    text: count
-  });
-  $('body').append(countdownElement);
-  setTimeout(function() {
-    countdownElement.remove();
-  }, 1000);
-}
 
-function playCountdownSound() {
-  var sound = document.getElementById('countdownSound');
-  sound.play();
-}
 
 function abrirTela(tela) {
   // Esconder todas as telas
