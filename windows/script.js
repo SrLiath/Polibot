@@ -1,6 +1,8 @@
 let isFullscreen = false;
 let fullscreenIcon = document.getElementById('fullscreen-icon');
 
+
+
 function minimizar(){
   window.ipcRender.send('window:minimize')
 }
@@ -37,13 +39,14 @@ function gravarBot() {
   }, 1000);
 
   function iniciarBot(){
-    alert('Gravacao Iniciado! Aperte ESC quando finalizar!')
     minimizar()
 
+    const value1 = document.getElementById("input1")
+
     const headers = new Headers({
-      'Option': 'gravar',
-      'Name': 'bot1',
-      'Voice': 'teste'
+      "Option": "gravar",
+      "Name": value1.value,
+      "Voice": value1.value
     });
 
     const requestOptions = {
@@ -63,7 +66,6 @@ function gravarBot() {
     
 
 }
-
 
 function abrirTela(tela) {
   // Esconder todas as telas
@@ -125,4 +127,19 @@ function sairFullscreen() {
 
 function fecharJanela() {
   window.close();
+}
+
+function openModal(){
+  const modal = document.getElementById("modal");
+  const submitBtn = document.getElementById("submitBtn");
+  const closeModalBtn = document.getElementById("closeModalBtn")
+  modal.style.display = "flex";
+
+  closeModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  submitBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    gravarBot()
+  })
 }

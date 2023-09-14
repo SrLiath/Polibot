@@ -29,9 +29,9 @@
 
     <div id="tela1">
 
-      <h2>Tela 1</h2>
+      <h2>Polibot - Automação de Processos</h2>
 
-      <button id="countdownButton" class="btn btn-primary" onclick="gravarBot()">Gravar Bot</button>
+      <button id="countdownButton" class="btn btn-primary" onclick="openModal()">Gravar Bot</button>
 
       <audio id="countdownSound">
         <source src="assets/song/plim.mp3" type="audio/mp3">
@@ -40,6 +40,15 @@
     </div>
   </div>
     <!-- FINAL DA TELA 1 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>PRESSIONE ESC PARA FINALIZAR</h2>
+            <label for="input1" class="input-label">Informe o nome do bot:</label>
+            <input type="text" id="input1" class="input-field" placeholder="ex: teste">
+            <button id="submitBtn">Avançar</button>
+        </div>
+    </div>
 
 
 

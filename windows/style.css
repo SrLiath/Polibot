@@ -2,6 +2,7 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
 @keyframes countdownAnimation {
   0% { transform: scale(1); opacity: 1; }
   50% { transform: scale(2); opacity: 0; }
@@ -64,4 +65,91 @@ body{
 
 .d-none {
   display: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+#openModalBtn {
+  margin: 20px;
+}
+
+.input-label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.input-field {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-field:hover,
+.input-field:focus {
+  border-color: #007BFF;
+}
+
+.input-label:hover {
+  color: #007BFF;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
