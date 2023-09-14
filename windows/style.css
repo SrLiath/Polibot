@@ -23,7 +23,7 @@ body{
   top: 0;
   left: 0;
   height: 100%;
-  width: 60px;
+  width: 80px;
   background-color: #333;
   transition: width 0.3s;
   z-index: 9999;
@@ -44,12 +44,21 @@ body{
   background-color: #444;
 }
 
-.content {
+#firstRow{
   background-color: #222;
   color: #fff;
   padding: 20px;
+  margin-left: 70px;
+}
+
+#secondRow{
+  background-color: red;
   margin-left: 60px;
-  overflow-y: hidden;
+}
+
+#secondRow > h1 {
+  color: black;
+  text-align: center;
 }
 
 .window-buttons {

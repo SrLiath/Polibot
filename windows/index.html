@@ -19,27 +19,68 @@
         </button>
       </li>
     </ul>
+    <ul>
+      <li>
+        <button class="btn btn-primary" onclick="abrirTela('tela2')">
+          <i class="fas fa-home"></i>
+        </button>
+      </li>
+    </ul>
   </div>
 
   <!-- FIM DO MENU LATERAL -->
-
-    <!-- INICIO DA TELA 1 -->
 
   <div class="content">
 
     <div id="tela1">
 
-      <h2>Polibot - Automação de Processos</h2>
 
-      <button id="countdownButton" class="btn btn-primary" onclick="openModal()">Gravar Bot</button>
 
-      <audio id="countdownSound">
-        <source src="assets/song/plim.mp3" type="audio/mp3">
-      </audio>
+
+      <div id="firstRow">
+
+        <h2>Polibot - Automação de Processos</h2>
+
+        <button id="countdownButton" class="btn btn-primary" onclick="openModal()">Gravar Bot</button>
+
+        <audio id="countdownSound">
+          <source src="assets/song/plim.mp3" type="audio/mp3">
+        </audio>
+
+      </div>
+
+      <div id="secondRow">
+        <h1>Lista dos bots</h1>
+      </div>
+      
+
+
+
 
     </div>
+
+    <!-- <div id="tela2" class="d-none">
+
+
+
+  
+      <div id="secondRow">
+        <h1>Lista dos bots</h1>
+      </div>
+  
+
+
+
+    <div> -->
+
   </div>
-    <!-- FINAL DA TELA 1 -->
+
+
+
+
+
+
+    
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModalBtn">&times;</span>
@@ -52,9 +93,11 @@
 
 
 
+
+
   <div class="window-buttons">
     <button class="btn btn-primary" onclick="minimizar()">
-      <i class="fa fa-window-minimize" aria-hidden="true"></i>
+      <i class="fa fa-window-minimize"></i>
     </button>
     <button class="btn btn-primary" onclick="alternarFullscreen()">
       <i id="fullscreen-icon" class="fas fa-expand"></i>
