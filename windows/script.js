@@ -1,9 +1,6 @@
 let isFullscreen = false;
 let fullscreenIcon = document.getElementById('fullscreen-icon');
 
-
-
-
 function minimizar(){
   window.ipcRender.send('window:minimize')
 }
@@ -65,7 +62,6 @@ function gravarBot() {
 
   }
     
-
 }
 
 function abrirTela(tela) {
@@ -74,9 +70,6 @@ function abrirTela(tela) {
   telas.forEach(element => {
     element.classList.add('d-none');
   });
-
-  
-console.log(window.innerHeight)
 
   // Mostrar a tela selecionada
   let telaSelecionada = document.getElementById(tela);

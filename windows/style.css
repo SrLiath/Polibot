@@ -44,6 +44,10 @@ body{
   background-color: #444;
 }
 
+.sidebar ul li:active{
+  background-color: grey;
+}
+
 #firstRow{
   background-color: #222;
   color: #fff;
@@ -189,7 +193,7 @@ button:hover {
   background-color: grey;
 }
 
-#cards {
+#tela2 #secondRow #cards {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
