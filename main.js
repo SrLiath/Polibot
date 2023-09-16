@@ -25,8 +25,6 @@ function createWindow() {
 
 }
 
-
-
 electron_1.app.whenReady().then(function () {
   createWindow();
 

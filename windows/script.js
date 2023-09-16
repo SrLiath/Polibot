@@ -3,6 +3,7 @@ let fullscreenIcon = document.getElementById('fullscreen-icon');
 
 
 
+
 function minimizar(){
   window.ipcRender.send('window:minimize')
 }
@@ -74,10 +75,19 @@ function abrirTela(tela) {
     element.classList.add('d-none');
   });
 
+  
+console.log(window.innerHeight)
+
   // Mostrar a tela selecionada
   let telaSelecionada = document.getElementById(tela);
   telaSelecionada.classList.remove('d-none');
 
+  telaSelecionada.children[1].children[0].classList.remove('d-none')
+
+  for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
+    telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
+  }
+  
   for (let i = 0; i < telaSelecionada.children.length; i++) {
     if(telaSelecionada.children[i].tagName == 'DIV'){
       telaSelecionada.children[i].classList.remove('d-none')

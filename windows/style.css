@@ -51,7 +51,7 @@ body{
   margin-left: 70px;
 }
 
-#secondRow{
+#tela1 #secondRow{
   background-color: red;
   margin-left: 60px;
 }
@@ -161,4 +161,43 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#tela2 > div > h3{
+  margin-left: 20px;
+}
+
+#tela2 #secondRow {
+  margin-left: 80px;
+  max-width: 1200px;
+  max-height: 1200px;
+  background-color: grey;
+}
+
+#cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+#cards .card{
+  border-radius: 20px;
 }
