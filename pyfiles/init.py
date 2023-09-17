@@ -7,8 +7,8 @@ if __name__ == "__main__":
     ouvir = threading.Thread(target=call.hear_)
     ouvir.start()
     # Thread para detectar teclas
-    #teclas = threading.Thread(target=call.hear_)
-    #teclas.start()
+    teclas = threading.Thread(target=call.listen_)
+    teclas.start()
     # Inicia o servidor
     call.server_()
 
