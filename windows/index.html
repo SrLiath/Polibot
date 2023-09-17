@@ -29,6 +29,13 @@
         </button>
       </li>
     </ul>
+    <ul>
+      <li>
+        <button class="btn btn-primary" onclick="abrirTela('tela3')">
+          <i class="fa fa-users"></i>
+        </button>
+      </li>
+    </ul>
   </div>
 
   <!-- FIM DO MENU LATERAL -->
@@ -45,7 +52,7 @@
       <div id="secondRow">
         <h1>Lista dos bots</h1>
       </div>
-      <div>
+      <div id="thirdRow">
         <table class="table table-bordered table-striped">
           <thead>
               <tr>
@@ -57,8 +64,7 @@
           <tbody id="listBots">
               <!-- Os bots serão adicionados aqui -->
           </tbody>
-      </table>
-        
+        </table>
       </div>
     </div>
     <div id="tela2" class="d-none">
@@ -69,47 +75,55 @@
         <div id="cards" class="fullscreen-cards">
           <div class="card">
             <img src="https://avatars.githubusercontent.com/u/86482642?v=4" alt="Integrante 1">
-            <h3>John</h3>
+            <h4>John</h4>
             <p>Desenvolvedor FullStack | DBA | Python/NodeJs</p>
             <p>Email: Santos.jonathan.jj@gmail.com</p>
           </div>
           <div class="card">
             <img src="https://via.placeholder.com/150" alt="Integrante 1">
-            <h3>Renan Gonzalez Baratella</h3>
+            <h4>Renan Gonzalez Baratella</h4>
             <p>Desenvolvedor Front-end</p>
             <p>Email: integrante1@example.com</p>
           </div>
           <div class="card">
             <img src="https://via.placeholder.com/150" alt="Integrante 1">
-            <h3>Gabriel</h3>
+            <h4>Gabriel</h4>
             <p>Desenvolvedor Front-end</p>
             <p>Email: integrante1@example.com</p>
           </div>
           <div class="card">
             <img src="https://via.placeholder.com/150" alt="Integrante 1">
-            <h3>Jose</h3>
+            <h4>Jose</h4>
             <p>Desenvolvedor Front-end</p>
             <p>Email: integrante1@example.com</p>
           </div>
           <div class="card">
             <img src="https://via.placeholder.com/150" alt="Integrante 1">
-            <h3>Alex</h3>
+            <h4>Alex</h4>
             <p>Desenvolvedor Front-end</p>
             <p>Email: integrante1@example.com</p>
           </div>
         </div>
       </div>
     </div>
+    <div id="tela3" class="d-none">
+      <div id="firstRow">
+        <div>
+          <h1>Sobre o Polibot...</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, eveniet animi commodi velit unde illo corrupti expedita cumque atque, reprehenderit, pariatur natus iusto explicabo? Inventore repudiandae sint voluptatum quasi voluptatem!</p>
+        </div>
+      </div>
+    </div>
   </div>
     
   <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModalBtn">&times;</span>
-            <h2>PRESSIONE ESC PARA FINALIZAR</h2>
-            <label for="input1" class="input-label">Informe o nome do bot:</label>
-            <input type="text" id="input1" class="input-field" placeholder="ex: teste">
-            <button id="submitBtn">Avançar</button>
-        </div>
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h3>PRESSIONE ESC PARA FINALIZAR</h3>
+      <label for="input1" class="input-label">Informe uma das opções:</label>
+      <input type="text" id="input1" class="input-field" placeholder="ex: teste">
+      <button id="submitBtn">Avançar</button>
+    </div>
   </div>
 
 

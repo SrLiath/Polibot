@@ -56,7 +56,7 @@ body{
 }
 
 #tela1 #secondRow{
-  background-color: red;
+  background-color: grey;
   margin-left: 60px;
 }
 
@@ -226,7 +226,7 @@ button:hover {
 
   .card{
     width: 250px;
-    height: 500px;
+    height: 472px;
   }
 }
 

@@ -66,7 +66,7 @@ function gravarBot() {
     const headers = new Headers({
       "Option": "gravar",
       "Name": value1.value,
-      "Voice": value1.value
+      "Key": value1.value
     });
 
     const requestOptions = {
