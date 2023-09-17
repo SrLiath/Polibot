@@ -45,7 +45,7 @@ def executar_comandos(filename):
         elif command_type == 'keypress':
             key = command['key']
             pressed = command['pressed']
-            time.sleep(0.2)  # Pausa para evitar pressionamentos consecutivos
+            time.sleep(0.1)  # Pausa para evitar pressionamentos consecutivos
             if pressed:
                 pyautogui.keyDown(key)
             else:

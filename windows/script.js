@@ -108,6 +108,8 @@ function abrirTela(tela) {
   telaSelecionada.classList.remove('d-none');
 
   telaSelecionada.children[1].children[0].classList.remove('d-none')
+  
+  console.log(telaSelecionada)
 
   for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
     telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
@@ -178,15 +180,9 @@ function openModal(){
     gravarBot()
   })
 
-  opcao.addEventListener('change', function () {
+  opcao.addEventListener('change', () => {
     var allDivs = document.querySelectorAll('.selected');
-  
-    // Oculta todas as telas
-    allDivs.forEach(function (div) {
-        div.style.display = 'none';
-    });
-  
-    // Mostra a tela selecionada
+    allDivs.forEach(div => div.style.display = 'none');
     document.getElementById(opcao.value).style.display = 'block';
   });
   
