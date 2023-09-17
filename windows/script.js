@@ -1,5 +1,6 @@
 let isFullscreen = false;
 let fullscreenIcon = document.getElementById('fullscreen-icon');
+const opcao = document.getElementById("opcao");
 const fs = require('fs');
 const { ipcRenderer } = require('electron');
 const $ = require('jquery'); 
@@ -61,13 +62,22 @@ function gravarBot() {
   function iniciarBot(){
     minimizar()
 
-    const value1 = document.getElementById("input1")
+    let headers = null
 
-    const headers = new Headers({
-      "Option": "gravar",
-      "Name": value1.value,
-      "Key": value1.value
-    });
+    const nomeBotAtalho = document.getElementById('nomeBotAtalho').value
+    const atalhoBot = document.getElementById('opcaoAtalho').value
+
+    if(opcao.value == 'op1'){
+      headers = new Headers({
+        "Option": "gravar",
+        "Name": nomeBotAtalho,
+        "Key": atalhoBot
+      });
+    } else if(opcao.value == 'op2'){
+
+    }
+
+    
 
     const requestOptions = {
       method: 'GET',
@@ -167,4 +177,18 @@ function openModal(){
     modal.style.display = "none";
     gravarBot()
   })
+
+  opcao.addEventListener('change', function () {
+    var allDivs = document.querySelectorAll('.selected');
+  
+    // Oculta todas as telas
+    allDivs.forEach(function (div) {
+        div.style.display = 'none';
+    });
+  
+    // Mostra a tela selecionada
+    document.getElementById(opcao.value).style.display = 'block';
+  });
+  
 }
+

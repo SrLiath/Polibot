@@ -121,9 +121,24 @@
       <span class="close" id="closeModalBtn">&times;</span>
       <h3>PRESSIONE ESC PARA FINALIZAR</h3>
       <label for="input1" class="input-label">Informe uma das opções:</label>
-      <input type="text" id="input1" class="input-field" placeholder="ex: teste">
-      <button id="submitBtn">Avançar</button>
-    </div>
+      <select id="opcao">
+        <option value="op1">Chamada por atalho</option>
+        <option value="op2">Chamada por voz</option>
+      </select>
+      <div id="op1" class="selected">
+          <label for="nomeBot">Digite o nome do programa:</label>
+          <input type="text" id="nomeBotAtalho" name="nomeBot" placeholder="ex: Bot1">
+          <h5>Atalho disponível para chamada do bot:</h5>
+          <select id="opcaoAtalho">
+            <option value="Ctrl+D">Ctrl+D</option>
+          </select>
+      </div>
+      <div id="op2" class="selected" style="display: none;">
+        <h2>Tela 2</h2>
+        <p>Conteúdo da Tela 2.</p>
+      </div>
+        <button id="submitBtn">Avançar</button>
+      </div>
   </div>
 
 
