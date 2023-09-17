@@ -221,7 +221,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
   }
 
   .card{
@@ -233,5 +233,5 @@ button:hover {
 
 
 #cards .card{
-  border-radius: 20px;
+  border-radius: 10px;
 }

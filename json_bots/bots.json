@@ -1,0 +1,16 @@
+[
+    {
+        "path": "json_bots/Teclado.json",
+        "botname": "Teclado",
+        "call": {
+            "key": "Crtl+Shift+M"
+        }
+    },
+    {
+        "path": "json_bots/Mouse.json",
+        "botname": "Exemplo",
+        "call": {
+            "key": "Crtl+Shift+T"
+        }
+    }
+]

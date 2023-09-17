@@ -1,26 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var electron_1 = require("electron");
-var path = require("path");
-const electronIpcMain = require('electron').ipcMain;
+const electron_1 = require("electron");
+const ipcMain = require('electron').ipcMain;
+let win; 
+
 
 function createWindow() {
-  var win = new electron_1.BrowserWindow({
+  win = new electron_1.BrowserWindow({
     width: 800,
     height: 600,
     frame: false,
     webPreferences: {
-      nodeIntegration: false,
-      contextIsolation: true,
-      preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true,
     }
   });
-  // win.webContents.openDevTools();
+  //win.webContents.openDevTools();
 
   win.loadFile('./windows/index.html');
-
-  electronIpcMain.on('window:minimize', () => {
-    win.minimize();
+  ipcMain.on('minimize-window', () => {
+    win.minimize()
   })
 
 }
@@ -40,3 +40,4 @@ electron_1.app.on('window-all-closed', function () {
     electron_1.app.quit();
   }
 });
+

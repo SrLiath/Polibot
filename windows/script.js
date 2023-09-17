@@ -1,9 +1,31 @@
 let isFullscreen = false;
 let fullscreenIcon = document.getElementById('fullscreen-icon');
+const fs = require('fs');
+const { ipcRenderer } = require('electron');
+const $ = require('jquery'); 
 
 function minimizar(){
-  window.ipcRender.send('window:minimize')
+  ipcRenderer.send('minimize-window');
 }
+$(document).ready(function () {
+$.getJSON('../json_bots/bots.json', function(bots) {
+  const botList = $('#listBots');
+
+  bots.forEach((bot) => {
+    const row = $('<tr>');
+    const call = bot.call.key ? bot.call.key : bot.call.voice;
+    const botname = bot.botname;
+    row.html(`
+      <td class="text-center">${botname}</td>
+      <td class="text-center">${call}</td>
+      <td class="text-center"><i class="fa fa-x" onclick="del(${bot.path})"></i></td>
+    `);
+
+    botList.append(row);
+  });
+});
+});
+
 
 function gravarBot() {
   let countdown = 3;

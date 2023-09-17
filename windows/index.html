@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -43,6 +45,21 @@
       <div id="secondRow">
         <h1>Lista dos bots</h1>
       </div>
+      <div>
+        <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th class="text-center">Nome do Bot</th>
+                  <th class="text-center">Chamada</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody id="listBots">
+              <!-- Os bots serão adicionados aqui -->
+          </tbody>
+      </table>
+        
+      </div>
     </div>
     <div id="tela2" class="d-none">
       <div id="firstRow">
@@ -51,10 +68,10 @@
       <div id="secondRow" class="fullscreen-row">
         <div id="cards" class="fullscreen-cards">
           <div class="card">
-            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <img src="https://avatars.githubusercontent.com/u/86482642?v=4" alt="Integrante 1">
             <h3>John</h3>
-            <p>Desenvolvedor Front-end</p>
-            <p>Email: integrante1@example.com</p>
+            <p>Desenvolvedor FullStack | DBA | Python/NodeJs</p>
+            <p>Email: Santos.jonathan.jj@gmail.com</p>
           </div>
           <div class="card">
             <img src="https://via.placeholder.com/150" alt="Integrante 1">
