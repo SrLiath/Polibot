@@ -108,8 +108,9 @@ function abrirTela(tela) {
   telaSelecionada.classList.remove('d-none');
 
   telaSelecionada.children[1].children[0].classList.remove('d-none')
-  
+
   console.log(telaSelecionada)
+
 
   for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
     telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')

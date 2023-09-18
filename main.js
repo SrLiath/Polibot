@@ -16,7 +16,7 @@ function createWindow() {
       enableRemoteModule: true,
     }
   });
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
 
   win.loadFile('./windows/index.html');
   ipcMain.on('minimize-window', () => {
