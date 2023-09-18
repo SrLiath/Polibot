@@ -1,12 +1,23 @@
-body{
-    overflow-x: hidden;
-    overflow-y: hidden;
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @keyframes countdownAnimation {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(2); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .countdown {
@@ -44,24 +55,24 @@ body{
   background-color: #444;
 }
 
-.sidebar ul li:active{
+.sidebar ul li:active {
   background-color: grey;
 }
 
-#firstRow{
+#firstRow {
   background-color: #222;
   color: #fff;
   padding: 20px;
   margin-left: 70px;
 }
 
-#tela1 #secondRow{
+#tela1 #secondRow {
   background-color: grey;
   margin-left: 60px;
 }
 
-#secondRow > h1 {
-  color: black;
+#secondRow>h1 {
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -167,13 +178,28 @@ button:hover {
   background-color: #0056b3;
 }
 
+h4 {
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(5, 3, 3);
+}
+
+h4:hover {
+  color: gold;
+  transition: 0.3s;
+}
+
+p {
+  font-size: 17px;
+}
+
 .card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #000000;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 5px;
   text-align: center;
-  background-color: #f9f9f9;
+  background: linear-gradient(to left, rgb(78, 88, 143), rgb(68, 202, 219));
   width: 130px;
   height: 513px;
 }
@@ -181,22 +207,27 @@ button:hover {
 .card img {
   max-width: 100%;
   border-radius: 50%;
+  border: 1px solid black;
 }
 
-#tela2 > div > h3{
+
+#tela2>div>h3 {
   margin-left: 20px;
 }
 
-#tela2 #secondRow,
-#tela3 #secondRow {
+#tela2 #secondRow {
   margin-left: 80px;
   max-width: 800px;
   max-height: 600px;
   background-color: grey;
 }
 
-#tela3 > div > h3{
+#tela3>div>h3 {
   margin-left: 20px;
+}
+
+#tela3 #secondRow {
+  margin-left: 80px;
 }
 
 #tela2 #secondRow #cards {
@@ -208,28 +239,27 @@ button:hover {
 }
 
 @media only screen and (min-width: 1200px) {
-  #tela2 #secondRow {
+
+  #tela2 > #secondRow {
     margin-left: 80px;
-    max-width: 1200px;
-    max-height: 1000px;
-    background-color: black;
+    max-width: 100%;
+    max-height: 100vh;
+    background: linear-gradient(to bottom, rgb(2, 2, 1), rgb(116, 117, 101));
   }
-  
+
   #cards {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 2px;
+    height: 100vh;
   }
 
-  .card{
+  .card {
     width: 250px;
-    height: 472px;
+    height: 410px;
   }
 }
 
-#cards .card{
+#cards .card {
   border-radius: 10px;
 }
