@@ -189,3 +189,10 @@ function openModal(){
   
 }
 
+//função se clikar fora do modal o modal fecha
+window.addEventListener('click', function (event) {
+    var modal = document.getElementById('modal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
