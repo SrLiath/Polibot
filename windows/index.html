@@ -131,16 +131,18 @@
         <option value="op2">Chamada por voz</option>
       </select>
       <div id="op1" class="selected">
-          <label for="nomeBot">Digite o nome do programa:</label>
-          <input type="text" id="nomeBotAtalho" name="nomeBot" placeholder="ex: Bot1">
-          <h5>Atalho disponível para chamada do bot:</h5>
-          <select id="opcaoAtalho">
-            <option value="Ctrl+D">Ctrl+D</option>
-          </select>
+        <label for="nomeBot">Digite o nome do programa:</label>
+        <input type="text" class="input" id="atalhoNomeBot" name="nomeBot" placeholder="ex: Bot1">
+        <h5>Atalho disponível para chamada do bot:</h5>
+        <select id="atalhoChamada">
+          <option value="Ctrl+D">Ctrl+D</option>
+        </select>
       </div>
       <div id="op2" class="selected" style="display: none;">
-        <h2>Tela 2</h2>
-        <p>Conteúdo da Tela 2.</p>
+        <label for="campo1">Informe o nome do programa: </label>
+        <input type="text" id="vozNomeBot" class="input" placeholder="Digite algo aqui">
+        <label for="campo2">Informe o nome para chamada de voz: </label>
+        <input type="text" id="vozChamada" class="input" placeholder="Digite algo aqui">
       </div>
         <button id="submitBtn">Avançar</button>
       </div>

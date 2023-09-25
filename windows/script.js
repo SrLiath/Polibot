@@ -64,20 +64,25 @@ function gravarBot() {
 
     let headers = null
 
-    const nomeBotAtalho = document.getElementById('nomeBotAtalho').value
-    const atalhoBot = document.getElementById('opcaoAtalho').value
+    const atalhoNomeBot = document.getElementById('atalhoNomeBot').value
+    const atalhoChamada = document.getElementById('atalhoChamada').value
+
+    const vozNomeBot = document.getElementById('vozNomeBot').value
+    const vozChamada = document.getElementById('vozChamada').value
 
     if(opcao.value == 'op1'){
       headers = new Headers({
         "Option": "gravar",
-        "Name": nomeBotAtalho,
-        "Key": atalhoBot
+        "Name": atalhoNomeBot,
+        "Key": atalhoChamada
       });
     } else if(opcao.value == 'op2'){
-
+      headers = new Headers({
+        "Option": "gravar",
+        "Name": vozNomeBot,
+        "Voice": vozChamada
+      });
     }
-
-    
 
     const requestOptions = {
       method: 'GET',

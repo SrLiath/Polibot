@@ -146,15 +146,6 @@ button {
   transition: color 0.3s ease-in-out;
 }
 
-.input-field {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  border: 1px solid #ccc;
-  transition: border-color 0.3s ease-in-out;
-}
-
 .input-field:hover,
 .input-field:focus {
   border-color: #007BFF;
@@ -261,4 +252,10 @@ p {
 
 #cards .card {
   border-radius: 10px;
+}
+
+.input {
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
 }
