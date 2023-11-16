@@ -5,5 +5,12 @@
         "call": {
             "voice": "gravar"
         }
+    },
+    {
+        "path": "..\\json_bots\\commit.json",
+        "botname": "commit",
+        "call": {
+            "voice": "gravar"
+        }
     }
 ]
