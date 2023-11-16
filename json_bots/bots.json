@@ -1,16 +1,16 @@
 [
     {
-        "path": "json_bots/Teclado.json",
-        "botname": "Teclado",
+        "path": "..\\json_bots\\logs.json",
+        "botname": "logs",
         "call": {
-            "key": "Crtl+Shift+M"
+            "voice": "enviar e-mail"
         }
     },
     {
-        "path": "json_bots/Mouse.json",
-        "botname": "Exemplo",
+        "path": "..\\json_bots\\logs.json",
+        "botname": "logs",
         "call": {
-            "key": "Crtl+Shift+T"
+            "voice": "enviar e-mail"
         }
     }
 ]

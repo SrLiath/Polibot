@@ -34,7 +34,7 @@ def main():
         keys = key_str.split('+')
         return all(k in key_sequence for k in keys)
 
-    json_file_path = 'json_bots/bots.json'
+    json_file_path = '../json_bots/bots.json'
     bots_data = read_json_file(json_file_path)
     current_hash = calculate_json_hash(bots_data)
     key_commands = {}

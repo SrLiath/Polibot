@@ -69,12 +69,12 @@ def gravar(nome, call, type):
     keyboard_listener.start()
     
     keyboard_listener.join()
-    filename = 'json_bots/'
+    filename = '..\\json_bots\\'
     filename += nome + '.json'
 
 
 
-    with open('json_bots\\bots.json', 'r', encoding='utf-8') as arquivo_json:
+    with open('..\\json_bots\\bots.json', 'r', encoding='utf-8') as arquivo_json:
         dados_existente = json.load(arquivo_json)
 
     if type == 0:
@@ -93,7 +93,7 @@ def gravar(nome, call, type):
     # Adicione o novo objeto à lista existente
     dados_existente.append(botJson)
     # Escreva os dados atualizados de volta para o arquivo JSON
-    with open('json_bots\\bots.json', 'w', encoding='utf-8') as arquivo_json:
+    with open('..\json_bots\\bots.json', 'w', encoding='utf-8') as arquivo_json:
         json.dump(dados_existente, arquivo_json, indent=4)
 
     # Salve os comandos em um arquivo JSON

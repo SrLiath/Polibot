@@ -3,53 +3,58 @@ let fullscreenIcon = document.getElementById('fullscreen-icon');
 const opcao = document.getElementById("opcao");
 const fs = require('fs');
 const { ipcRenderer } = require('electron');
-const $ = require('jquery'); 
+const $ = require('jquery');
 
-function minimizar(){
+function minimizar() {
   ipcRenderer.send('minimize-window');
 }
 $(document).ready(function () {
-$.getJSON('../json_bots/bots.json', function(bots) {
-  const botList = $('#listBots');
+  function updateBotList() {
+    $.getJSON('../json_bots/bots.json', function (bots) {
+      const botList = $('#listBots');
+      botList.empty(); // Clear existing content
 
-  bots.forEach((bot) => {
-    const row = $('<tr>');
-    const call = bot.call.key ? bot.call.key : bot.call.voice;
-    const botname = bot.botname;
-    row.html(`
-      <td class="text-center">${botname}</td>
-      <td class="text-center">${call}</td>
-      <td class="text-center"><i class="fa fa-x" onclick="del(${bot.path})"></i></td>
-    `);
+      bots.forEach((bot) => {
+        const row = $('<tr>');
+        const call = bot.call.key ? bot.call.key : bot.call.voice;
+        const botname = bot.botname;
+        row.html(`
+          <td class="text-center">${botname}</td>
+          <td class="text-center">${call}</td>
+          <td class="text-center"><i class="fa fa-x" onclick="del('${bot.path}')"></i></td>
+        `);
 
-    botList.append(row);
-  });
-});
+        botList.append(row);
+      });
+    });
+  }
+  setInterval(updateBotList, 5000);
+  updateBotList();
 });
 
 
 function gravarBot() {
   let countdown = 3;
 
-  const displayCountdown = (count) =>  {
+  const displayCountdown = (count) => {
     var countdownElement = $('<div>', {
       class: 'countdown',
       text: count
     });
     $('body').append(countdownElement);
-    setTimeout(function() {
+    setTimeout(function () {
       countdownElement.remove();
     }, 1000);
   }
-  
+
   const playCountdownSound = () => {
     var sound = document.getElementById('countdownSound');
     sound.play();
   }
 
-  let countdownInterval = setInterval(function() {
+  let countdownInterval = setInterval(function () {
     if (countdown === 0) {
-        //aqui fica pra fazer a conexão com o arquivo no nodekernel chamado detect
+      //aqui fica pra fazer a conexão com o arquivo no nodekernel chamado detect
       clearInterval(countdownInterval);
       playCountdownSound();
       iniciarBot()
@@ -59,7 +64,7 @@ function gravarBot() {
     }
   }, 1000);
 
-  function iniciarBot(){
+  function iniciarBot() {
     minimizar()
 
     let headers = null
@@ -70,13 +75,13 @@ function gravarBot() {
     const vozNomeBot = document.getElementById('vozNomeBot').value
     const vozChamada = document.getElementById('vozChamada').value
 
-    if(opcao.value == 'op1'){
+    if (opcao.value == 'op1') {
       headers = new Headers({
         "Option": "gravar",
         "Name": atalhoNomeBot,
         "Key": atalhoChamada
       });
-    } else if(opcao.value == 'op2'){
+    } else if (opcao.value == 'op2') {
       headers = new Headers({
         "Option": "gravar",
         "Name": vozNomeBot,
@@ -94,11 +99,11 @@ function gravarBot() {
         if (!response.ok) {
           throw new Error('Erro na requisição');
         }
-      return response.json();
+        return response.json();
       })
 
   }
-    
+
 }
 
 function abrirTela(tela) {
@@ -120,9 +125,9 @@ function abrirTela(tela) {
   for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
     telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
   }
-  
+
   for (let i = 0; i < telaSelecionada.children.length; i++) {
-    if(telaSelecionada.children[i].tagName == 'DIV'){
+    if (telaSelecionada.children[i].tagName == 'DIV') {
       telaSelecionada.children[i].classList.remove('d-none')
     }
   }
@@ -172,7 +177,7 @@ function fecharJanela() {
   window.close();
 }
 
-function openModal(){
+function openModal() {
   const modal = document.getElementById("modal");
   const submitBtn = document.getElementById("submitBtn");
   const closeModalBtn = document.getElementById("closeModalBtn")
@@ -191,13 +196,13 @@ function openModal(){
     allDivs.forEach(div => div.style.display = 'none');
     document.getElementById(opcao.value).style.display = 'block';
   });
-  
+
 }
 
 //função se clikar fora do modal o modal fecha
 window.addEventListener('click', function (event) {
-    var modal = document.getElementById('modal');
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
+  var modal = document.getElementById('modal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
 });
