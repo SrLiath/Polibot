@@ -1,16 +1,1 @@
-[
-    {
-        "path": "..\\json_bots\\commit.json",
-        "botname": "commit",
-        "call": {
-            "voice": "gravar projeto"
-        }
-    },
-    {
-        "path": "..\\json_bots\\commit.json",
-        "botname": "commit",
-        "call": {
-            "voice": "gravar projeto"
-        }
-    }
-]
+[]
