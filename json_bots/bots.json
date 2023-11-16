@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "path": "..\\json_bots\\commit.json",
+        "botname": "commit",
+        "call": {
+            "voice": "gravar"
+        }
+    }
+]
