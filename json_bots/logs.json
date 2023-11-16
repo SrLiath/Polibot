@@ -1670,5 +1670,2595 @@
         "type": "keypress",
         "key": "esc",
         "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 984,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1542,
+        "y": 682,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 453,
+        "y": 1053,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 94,
+        "y": 669,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 887,
+        "y": 481,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 694,
+        "y": 509,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 662,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 862,
+        "y": 678,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 862,
+        "y": 678,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 862,
+        "y": 678,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 213,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 213,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 213,
+        "y": 506,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1893,
+        "y": 426,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1893,
+        "y": 426,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1893,
+        "y": 426,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 592,
+        "y": 352,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 592,
+        "y": 352,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 592,
+        "y": 352,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 629,
+        "y": 501,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 833,
+        "y": 532,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 962,
+        "y": 545,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "delete",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "delete",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 759,
+        "y": 35,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1061,
+        "y": 18,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1733,
+        "y": 11,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1744,
+        "y": 29,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1530,
+        "y": 181,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 972,
+        "y": 1032,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1551,
+        "y": 668,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1724,
+        "y": 0,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 27,
+        "y": 1056,
+        "button": "Button.right",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 166,
+        "y": 577,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 166,
+        "y": 577,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 166,
+        "y": 577,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 162,
+        "y": 592,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 162,
+        "y": 592,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 162,
+        "y": 592,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "j",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "j",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "j",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "j",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\\",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\\",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "b",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "b",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\\",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\\",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "*",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "*",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "-",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "-",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\"",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\"",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\u00e7",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "~",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u00e7",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "~",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "e",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "e",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "b",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "b",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\"",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\"",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "shift_r",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "t",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "p",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "u",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "u",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "s",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "s",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "h",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "h",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "r",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "r",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "g",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "n",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "n",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "space",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "a",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "n",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "n",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1437,
+        "y": 256,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1437,
+        "y": 256,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1437,
+        "y": 256,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1437,
+        "y": 256,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1302,
+        "y": 77,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1302,
+        "y": 77,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1302,
+        "y": 77,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1302,
+        "y": 77,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1764,
+        "y": 99,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 979,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 924,
+        "y": 1040,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 827,
+        "y": 1045,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 730,
+        "y": 1046,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 696,
+        "y": 751,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 696,
+        "y": 751,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 696,
+        "y": 751,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 696,
+        "y": 751,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 346,
+        "y": 169,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 346,
+        "y": 169,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 346,
+        "y": 169,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 346,
+        "y": 169,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "backspace",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "backspace",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "\u0013",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "alt_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
     }
 ]
