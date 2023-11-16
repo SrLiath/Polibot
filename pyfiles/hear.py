@@ -8,6 +8,7 @@ def ouvir_audio():
 
     while True:
         with sr.Microphone() as source:
+            r.adjust_for_ambient_noise(source, duration=1)
             print("Ouvindo...")
             audio = r.listen(source)
         try:
@@ -32,4 +33,5 @@ def ouvir_audio():
             print("Não entendi o que você disse.")
         except sr.RequestError as e:
             print(f"Não foi possível completar a requisição: {e}")
-
+if __name__ == "__main__":
+    ouvir_audio()
