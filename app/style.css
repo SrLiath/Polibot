@@ -1,0 +1,261 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@keyframes countdownAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown {
+  font-size: 48px;
+  text-align: center;
+  margin-top: 200px;
+  animation-name: countdownAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px;
+  background-color: #333;
+  transition: width 0.3s;
+  z-index: 9999;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li:hover {
+  background-color: #444;
+}
+
+.sidebar ul li:active {
+  background-color: grey;
+}
+
+#firstRow {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  margin-left: 70px;
+}
+
+#tela1 #secondRow {
+  background-color: grey;
+  margin-left: 60px;
+}
+
+#secondRow>h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.window-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+}
+
+.window-buttons button {
+  margin-left: 5px;
+}
+
+.d-none {
+  display: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 400px;
+  height: 600px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+#openModalBtn {
+  margin: 20px;
+}
+
+.input-label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.input-field:hover,
+.input-field:focus {
+  border-color: #007BFF;
+}
+
+.input-label:hover {
+  color: #007BFF;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(5, 3, 3);
+}
+
+h4:hover {
+  color: gold;
+  transition: 0.3s;
+}
+
+p {
+  font-size: 17px;
+}
+
+.card {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: linear-gradient(to left, rgb(78, 88, 143), rgb(68, 202, 219));
+  width: 130px;
+  height: 513px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+
+#tela2>div>h3 {
+  margin-left: 20px;
+}
+
+#tela2 #secondRow {
+  margin-left: 80px;
+  background-color: grey;
+}
+
+#tela3>div>h3 {
+  margin-left: 20px;
+}
+
+#tela3 #secondRow {
+  margin-left: 80px;
+}
+
+#tela2 #secondRow #cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  #tela2 #secondRow {
+    background: linear-gradient(to bottom, rgb(2, 2, 1), rgb(116, 117, 101));
+  }
+
+  #tela2 #secondRow #cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    height: 100vh;
+  }
+
+  .card {
+    width: 250px;
+    height: 380px;
+  }
+
+  #quartoCard, #quintoCard{
+    margin-bottom: 200px;
+    margin-left: 200px;
+  }
+
+}
+
+#cards .card {
+  border-radius: 10px;
+}
+
+.input {
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  font-size: 16px;
+}

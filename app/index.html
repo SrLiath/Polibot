@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polibot</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- INICIO DO MENU LATERAL -->
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <button class="btn btn-primary" onclick="abrirTela('tela1')">
+          <i class="fas fa-home"></i>
+        </button>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <button class="btn btn-primary" onclick="abrirTela('tela2')">
+          <i class="fa fa-users"></i>
+        </button>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <button class="btn btn-primary" onclick="abrirTela('tela3')">
+          <i class="fa fa-users"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FIM DO MENU LATERAL -->
+
+  <div class="content">
+    <div id="tela1">
+      <div id="firstRow">
+        <h2>Polibot - Automação de Processos</h2>
+        <button id="countdownButton" class="btn btn-primary" onclick="openModal()">Gravar Bot</button>
+        <audio id="countdownSound">
+          <source src="assets/song/plim.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <div id="secondRow">
+        <h1>Lista dos bots</h1>
+      </div>
+      <div id="thirdRow">
+        <table class="table table-bordered table-striped">
+          <thead>
+              <tr>
+                  <th class="text-center">Nome do Bot</th>
+                  <th class="text-center">Chamada</th>
+                  <th></th>
+              </tr>
+          </thead>
+          <tbody id="listBots">
+              <!-- Os bots serão adicionados aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="tela2" class="d-none">
+      <div id="firstRow">
+        <h3>Integrantes do Projeto Interdisciplinar</h2>
+      </div>
+      <div id="secondRow">
+        <div id="cards">
+          <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/86482642?v=4" alt="Integrante 1">
+            <h4>John</h4>
+            <p>Desenvolvedor FullStack | DBA | Python/NodeJs</p>
+            <p>Email: Santos.jonathan.jj@gmail.com</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <h4>Renan Baratella</h4>
+            <p>Ciencias da Computação</p>
+            <p>5° Semestre</p>
+          </div>
+          <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/107010062?s=400&u=a621d6b180de3b076c69d3b91929fb4dfaa11b1e&v=4"
+             alt="Integrante 1">
+            <h4>Gabriel Proença</h4>
+            <p>Desenvolvedor Front-end</p>
+            <p>Email: eduardogabs020@gmail.com</p>
+          </div>
+          <div class="card" id="quartoCard">
+            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <h4>Jose</h4>
+            <p>Desenvolvedor Front-end</p>
+            <p>Email: integrante1@example.com</p>
+          </div>
+          <div class="card" id="quintoCard">
+            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <h4>Alex</h4>
+            <p>Desenvolvedor Front-end</p>
+            <p>Email: integrante1@example.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tela3" class="d-none">
+      <div id="firstRow">
+        <h3>Sobre o Polibot...</h2>
+      </div>
+      <div id="secondRow">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga voluptas quod aspernatur iure, nostrum ut labore ex corrupti dolorem laborum in fugit autem quisquam tempora perspiciatis atque, sapiente eos totam.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h3>PRESSIONE ESC PARA FINALIZAR</h3>
+      <label for="input1" class="input-label">Informe uma das opções:</label>
+      <select id="opcao">
+        <option value="op1">Chamada por atalho</option>
+        <!-- <option value="op2">Chamada por voz</option> -->
+      </select>
+      <div id="op1" class="selected">
+        <label for="nomeBot">Digite o nome do programa:</label>
+        <input type="text" class="input" id="atalhoNomeBot" name="nomeBot" placeholder="ex: Bot1">
+        <h5>Atalho disponível para chamada do bot:</h5>
+        <select id="atalhoChamada">
+          <option value="CTRL+D">Ctrl+D</option>
+        </select>
+      </div>
+      <div id="op2" class="selected" style="display: none;">
+        <label for="campo1">Informe o nome do programa: </label>
+        <input type="text" id="vozNomeBot" class="input" placeholder="Digite algo aqui">
+        <label for="campo2">Informe o nome para chamada de voz: </label>
+        <input type="text" id="vozChamada" class="input" placeholder="Digite algo aqui">
+      </div>
+        <button id="submitBtn">Avançar</button>
+      </div>
+    </div>
+  <div>
+
+
+
+
+
+  <div class="window-buttons">
+    <button class="btn btn-primary" onclick="minimizar()">
+      <i class="fa fa-window-minimize"></i>
+    </button>
+    <button class="btn btn-primary" onclick="alternarFullscreen()">
+      <i id="fullscreen-icon" class="fas fa-expand"></i>
+    </button>
+    <button class="btn btn-primary" onclick="fecharJanela()">
+      <i class="fas fa-times-circle"></i>
+    </button>
+    
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</body>
+</html>
