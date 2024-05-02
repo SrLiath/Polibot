@@ -161,7 +161,7 @@ function salvarEventos(eventos) {
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
   if (!fs.existsSync('bots/eventos.ahk'))fs.writeFileSync('bots/eventos.ahk', 
-  command[0] + command[1] + '::\nSetKeyDelay, 80\nSetMouseDelay, 80\nCoordMode, Mouse, Screen\n\n');
+  command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
 
   if(eventos.type == 'mouseclick'){
       button = eventos.button == 1 ? 'Left' : 'Right'
