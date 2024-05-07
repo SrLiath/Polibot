@@ -12,27 +12,11 @@ function minimizar() {
 
 function gravarBot() {
   let countdown = 3;
-
-  const displayCountdown = count => {
-    var countdownElement = $('<div>', {
-      class: 'countdown',
-      text: count
-    });
-    $('body').append(countdownElement);
-    setTimeout(function () {
-      countdownElement.remove();
-    }, 1000);
-  }
-
-  const playCountdownSound = () => {
-    var sound = document.getElementById('countdownSound');
-    sound.play();
-  }
-
+  
   let countdownInterval = setInterval(() => {
     if (countdown === 0) {
       clearInterval(countdownInterval);
-      playCountdownSound();
+      countdownSound.play()
       iniciarBot()
     } else {
       displayCountdown(countdown);
@@ -40,20 +24,31 @@ function gravarBot() {
     }
   }, 1000);
 
-  function iniciarBot() {
-    minimizar()
-  
-    iohook.start();
-  
-    iohook.on('mouseclick', event => {
-        salvarEventos(event)
-    });
-  
-    iohook.on('keydown', event => {
-        salvarEventos(event)
-    });
+}
 
-  }
+const displayCountdown = count => {
+  var countdownElement = $('<div>', {
+    class: 'countdown',
+    text: count
+  });
+  $('body').append(countdownElement);
+  setTimeout(function () {
+    countdownElement.remove();
+  }, 1000);
+}
+
+function iniciarBot() {
+  minimizar()
+
+  iohook.start();
+
+  iohook.on('mouseclick', event => {
+      salvarEventos(event)
+  });
+
+  iohook.on('keydown', event => {
+      salvarEventos(event)
+  });
 
 }
 
@@ -183,7 +178,7 @@ function salvarEventos(eventos) {
         alert('Criado o bot! BASTA TECLAR CTRL+D PARA CHAMAR')
 
         exec("ahk2exe /in bots/eventos.ahk /out " + atalhoNomeBot + ".exe", () => {
-          exec("cd bots && del eventos.ahk", () => {
+          exec("cd bots", () => {
             exec("cd bots && start " + atalhoNomeBot)
           })
         })

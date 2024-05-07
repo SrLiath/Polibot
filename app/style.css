@@ -23,7 +23,7 @@ body {
 .countdown {
   font-size: 48px;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
   animation-name: countdownAnimation;
   animation-duration: 1s;
   animation-timing-function: ease-in-out;
@@ -222,6 +222,10 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+#thirdRow {
+  margin-left: 70px;
 }
 
 @media only screen and (min-width: 1200px) {

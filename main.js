@@ -18,7 +18,7 @@ app.whenReady().then(() => {
 
   app.allowRendererProcessReuse = false
 
-  win.webContents.openDevTools();
+  // win.webContents.openDevTools();
   win.loadFile('app/index.html')
 
   ipcMain.on('minimize-window', () => {
