@@ -157,7 +157,7 @@ async function salvarEventos(eventos) {
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
   if (!fs.existsSync('bots')) fs.mkdirSync('bots');
-  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 100\nSetMouseDelay, 100\nCoordMode, Mouse, Screen\n\n');
+  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 100\nSetMouseDelay, 40\nCoordMode, Mouse, Screen\n\n');
 
   switch (eventos.type) {
     case 'mouseclick':
