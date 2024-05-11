@@ -1,0 +1,29 @@
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 80px;
+    background-color: #333;
+    transition: width 0.3s;
+    z-index: 9999;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+#sidebar ul li:hover {
+    background-color: #444;
+}
+
+#sidebar ul li:active {
+    background-color: grey;
+}

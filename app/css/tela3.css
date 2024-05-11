@@ -1,0 +1,18 @@
+#tela3 #firstRow {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-left: 70px;
+}
+
+#tela3 p {
+    font-size: 17px;
+}
+
+#tela3 #firstRow h3 {
+    margin-left: 20px;
+}
+
+#tela3 #secondRow {
+    margin-left: 80px;
+}

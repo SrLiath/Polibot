@@ -1,0 +1,83 @@
+#tela2 #firstRow {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-left: 70px;
+}
+
+#tela2 h4 {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(5, 3, 3);
+}
+
+#tela2 h4:hover {
+    color: gold;
+    transition: 0.3s;
+}
+
+#tela2 p {
+    font-size: 17px;
+}
+
+#tela2 .card {
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(to left, rgb(78, 88, 143), rgb(68, 202, 219));
+    width: 130px;
+    height: 513px;
+}
+
+#tela2 .card img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#tela2 #firstRow h3 {
+    margin-left: 20px;
+}
+
+#tela2 #secondRow {
+    margin-left: 80px;
+    background-color: grey;
+}
+
+#tela2 #secondRow #cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#tela2 #cards .card {
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #tela2 #secondRow {
+        background: linear-gradient(to bottom, rgb(2, 2, 1), rgb(116, 117, 101));
+    }
+
+    #tela2 #secondRow #cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        height: 100vh;
+    }
+
+    .card {
+        width: 250px;
+        height: 380px;
+    }
+
+    #quartoCard,
+    #quintoCard {
+        margin-bottom: 200px;
+        margin-left: 200px;
+    }
+
+}

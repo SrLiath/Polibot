@@ -1,0 +1,20 @@
+#tela1 #firstRow {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-left: 70px;
+}
+
+#tela1 #secondRow {
+    background-color: grey;
+    margin-left: 60px;
+}
+
+#tela1 #secondRow>h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#tela1 #thirdRow {
+    margin-left: 70px;
+}

@@ -115,11 +115,11 @@ function sairFullscreen() {
   isFullscreen = false;
 }
 
-function fecharJanela() {
+function fecharJanela() { //chama no html
   window.close();
 }
 
-function openModal() {
+function openModal() { //chama no html
   const submitBtn = document.getElementById("submitBtn");
   const closeModalBtn = document.getElementById("closeModalBtn")
   modal.style.display = "flex";
@@ -140,7 +140,7 @@ function openModal() {
 
 }
 
-//função se clikar fora do modal o modal fecha
+//evento se clikar fora do modal o modal fecha
 window.addEventListener('click', event => {
   const modal = document.getElementById("modal");
   if (event.target == modal) {
@@ -155,8 +155,8 @@ function salvarEventos(eventos) {
   command = atalhoChamada.split('+')
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
-  if (!fs.existsSync('bots/eventos.ahk'))fs.writeFileSync('bots/eventos.ahk', 
-  command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
+  if (!fs.existsSync('bots')) fs.mkdirSync('bots');
+  if (!fs.existsSync('bots/eventos.ahk'))fs.writeFileSync('bots/eventos.ahk', command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
 
   if(eventos.type == 'mouseclick'){
       button = eventos.button == 1 ? 'Left' : 'Right'
@@ -176,15 +176,13 @@ function salvarEventos(eventos) {
         iohook.removeAllListeners()
 
         alert('Criado o bot! BASTA TECLAR CTRL+D PARA CHAMAR')
-
-        exec("ahk2exe /in bots/eventos.ahk /out " + atalhoNomeBot + ".exe", () => {
-          exec("cd bots", () => {
-            exec("cd bots && start " + atalhoNomeBot)
-          })
-        })
         
-        
-        
+        //implementação futura
+        // exec("ahk2exe /in bots/eventos.ahk /out " + atalhoNomeBot + ".exe", () => {
+        //   exec("cd bots", () => {
+        //     exec("cd bots && start " + atalhoNomeBot)
+        //   })
+        // })
         return;
       }
       
