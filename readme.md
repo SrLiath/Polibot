@@ -18,6 +18,8 @@ Caso queira diminuir ou aumentar a velocidade do mouse ou teclado basta alterar 
 Linha 160 <br>
 Em milisegundos: <br>
 SetKeyDelay, 100 <br>
-SetMouseDelay, 40
+SetMouseDelay, 40 <br>
+
+<video src='video.mp4' width=180>
 
 

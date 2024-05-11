@@ -168,7 +168,7 @@ async function salvarEventos(eventos) {
     case 'keydown':
         if(eventos.keycode == '1'){//se apertar o ESC para de detectar os eventos e cria o bot
           iohook.removeAllListeners()
-          alert('Criado o bot! BASTA TECLAR CTRL+D PARA CHAMAR')
+          alert(`Criado o bot! BASTA TECLAR ${atalhoChamada} PARA CHAMAR`)
           return;
         }
 
