@@ -1,5 +1,6 @@
 const { ipcRenderer } = require('electron');
-const fs = require('fs');
+const fs = require('fs')
+const fsPromise = require('fs').promises;
 const iohook = require('iohook')
 const { exec } = require('child_process');
 const path = require('path')
@@ -148,7 +149,7 @@ window.addEventListener('click', event => {
   }
 });
 
-function salvarEventos(eventos) {
+async function salvarEventos(eventos) {
   const atalhoNomeBot = document.getElementById('atalhoNomeBot').value
   const atalhoChamada = document.getElementById('atalhoChamada').value
 
@@ -158,38 +159,34 @@ function salvarEventos(eventos) {
   if (!fs.existsSync('bots')) fs.mkdirSync('bots');
   if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
 
-  if(eventos.type == 'mouseclick'){
+  switch (eventos.type) {
+    case 'mouseclick':
       button = eventos.button == 1 ? 'Left' : 'Right'
       fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `${eventos.type}, ${button}, ${eventos.x + 25}, ${eventos.y}\n`);
+      break;
+    case 'keydown':
+        if(eventos.keycode == '1'){//se apertar o ESC para de detectar os eventos e cria o bot
+          iohook.removeAllListeners()
+          alert('Criado o bot! BASTA TECLAR CTRL+D PARA CHAMAR')
+          return;
+        }
+
+        data = await lerArquivo('hotkeys.json')
+        fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Send, ${data[eventos.keycode]}\n`);
+    default:
+      "botao nao reconhecido"
+      break;
   }
 
-  if(eventos.type == 'keydown'){
-
-    fs.readFile('hotkeys.json', 'utf8', (err, data) => {
-      if (err) {
+  async function lerArquivo(arquivo) {
+    try {
+        const data = await fsPromise.readFile(arquivo, 'utf8');
+        return JSON.parse(data);
+    } catch (err) {
         console.error('Erro ao ler o arquivo:', err);
-        return;
-      }
-
-      if(eventos.keycode == '1'){//se apertar o ESC para de detectar os eventos e cria o bot
-        iohook.removeAllListeners()
-
-        alert('Criado o bot! BASTA TECLAR CTRL+D PARA CHAMAR')
-        
-        //implementação futura
-        // exec("ahk2exe /in bots/eventos.ahk /out " + atalhoNomeBot + ".exe", () => {
-        //   exec("cd bots", () => {
-        //     exec("cd bots && start " + atalhoNomeBot)
-        //   })
-        // })
-        return;
-      }
-      
-      const json = JSON.parse(data);
-      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Send, ${json[eventos.keycode]}\n`);
-
-      
-
-    });
+        throw err;
+    }
   }
+
 }
+
