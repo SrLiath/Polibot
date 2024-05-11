@@ -20,6 +20,5 @@ Em milisegundos: <br>
 SetKeyDelay, 100 <br>
 SetMouseDelay, 40 <br>
 
-<video src='video.mp4' width=180>
 
 
