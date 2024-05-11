@@ -156,15 +156,14 @@ function salvarEventos(eventos) {
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
   if (!fs.existsSync('bots')) fs.mkdirSync('bots');
-  if (!fs.existsSync('bots/eventos.ahk'))fs.writeFileSync('bots/eventos.ahk', command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
+  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
 
   if(eventos.type == 'mouseclick'){
       button = eventos.button == 1 ? 'Left' : 'Right'
-      fs.appendFileSync('bots/eventos.ahk', `${eventos.type}, ${button}, ${eventos.x}, ${eventos.y}\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `${eventos.type}, ${button}, ${eventos.x + 25}, ${eventos.y}\n`);
   }
 
   if(eventos.type == 'keydown'){
-
 
     fs.readFile('hotkeys.json', 'utf8', (err, data) => {
       if (err) {
@@ -187,7 +186,7 @@ function salvarEventos(eventos) {
       }
       
       const json = JSON.parse(data);
-      fs.appendFileSync('bots/eventos.ahk', `Send, ${json[eventos.keycode]}\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Send, ${json[eventos.keycode]}\n`);
 
       
 
