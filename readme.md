@@ -15,8 +15,9 @@ Na tela "Gravar bot", insira um nome do bot e selecione um atalho para a chamada
 
 Caso queira diminuir ou aumentar a velocidade do mouse ou teclado basta alterar em: <br>
 "Arquivo app/script.js" <br>
-Linha 159 <br>
-SetKeyDelay, 200 <br>
-SetMouseDelay, 200
+Linha 160 <br>
+Em milisegundos: <br>
+SetKeyDelay, 100 <br>
+SetMouseDelay, 40
 
 
