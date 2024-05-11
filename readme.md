@@ -3,10 +3,10 @@
 Programas necessários:
 
 - NodeJS(caso nao funcione na versão atual, use a v12.13.0)
-https://nodejs.org/en/blog/release/v12.13.0
+https://nodejs.org/en/blog/release/v12.13.0 <br>
 Execute o comando: npm install
 
-- Autohotkey(para execução do bot) 
+- Autohotkey(para execução do bot, v1.1) 
 https://www.autohotkey.com/download/ahk-install.exe
 
 <b> Execução do programa: </b>
