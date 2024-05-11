@@ -157,12 +157,13 @@ async function salvarEventos(eventos) {
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
   if (!fs.existsSync('bots')) fs.mkdirSync('bots');
-  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 200\nSetMouseDelay, 200\nCoordMode, Mouse, Screen\n\n');
+  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 100\nSetMouseDelay, 100\nCoordMode, Mouse, Screen\n\n');
 
   switch (eventos.type) {
     case 'mouseclick':
       button = eventos.button == 1 ? 'Left' : 'Right'
-      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `${eventos.type}, ${button}, ${eventos.x + 25}, ${eventos.y}\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `${eventos.type}, ${button}, ${eventos.x}, ${eventos.y}\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Sleep, 1000\n`);
       break;
     case 'keydown':
         if(eventos.keycode == '1'){//se apertar o ESC para de detectar os eventos e cria o bot
