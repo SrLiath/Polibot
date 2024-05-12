@@ -1,3 +1,4 @@
+;CTRL+A
 ^A::
 SetKeyDelay, 100
 SetMouseDelay, 40

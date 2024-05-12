@@ -11,9 +11,47 @@ function minimizar() {
   ipcRenderer.send('minimize-window');
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  function updateBotList() {
+      const botList = $('#listBots');
+      let arquivos = listarArquivosEmPasta('bots')
+      botList.empty(); // Clear existing content
+
+      arquivos.forEach((arquivo) => {
+        const nome = path.parse(arquivo).name 
+        const atalho = fs.readFileSync(`bots/${arquivo}`, 'utf8').split('\n')[0].substring(1);
+        const row = $('<tr>');
+        row.html(`
+          <td class="text-center">${nome}</td>
+          <td class="text-center">${atalho}</td>
+        `);
+
+        botList.append(row);
+      });
+  }
+
+  setInterval(updateBotList, 5000);
+  updateBotList()
+
+
+});
+
+
+
+function listarArquivosEmPasta(pasta) {
+  try {
+    const arquivos = fs.readdirSync(pasta);
+    return arquivos
+  } catch (err) {
+    console.error('Erro ao listar os arquivos:', err);
+  }
+}
+
+
+
 function gravarBot() {
   let countdown = 3;
-  
+
   let countdownInterval = setInterval(() => {
     if (countdown === 0) {
       clearInterval(countdownInterval);
@@ -44,13 +82,12 @@ function iniciarBot() {
   iohook.start();
 
   iohook.on('mouseclick', event => {
-      salvarEventos(event)
+    salvarEventos(event)
   });
 
   iohook.on('keydown', event => {
-      salvarEventos(event)
+    salvarEventos(event)
   });
-
 }
 
 function abrirTela(tela) {
@@ -150,42 +187,44 @@ window.addEventListener('click', event => {
 });
 
 async function salvarEventos(eventos) {
-  const atalhoNomeBot = document.getElementById('atalhoNomeBot').value
-  const atalhoChamada = document.getElementById('atalhoChamada').value
+  var atalhoNomeBot = document.getElementById('atalhoNomeBot')
+  var atalhoChamada = document.getElementById('atalhoChamada').value
 
   command = atalhoChamada.split('+')
   command[0] = command[0] === 'CTRL' ? '^' : '^'
 
   if (!fs.existsSync('bots')) fs.mkdirSync('bots');
-  if (!fs.existsSync(`bots/${atalhoNomeBot}.ahk`))fs.writeFileSync(`bots/${atalhoNomeBot}.ahk`, command[0] + command[1] + '::\nSetKeyDelay, 100\nSetMouseDelay, 40\nCoordMode, Mouse, Screen\n\n');
+  if (!fs.existsSync(`bots/${atalhoNomeBot.value}.ahk`)) fs.writeFileSync(`bots/${atalhoNomeBot.value}.ahk`, `;${atalhoChamada}\n` + command[0] + command[1] + '::\nSetKeyDelay, 100\nSetMouseDelay, 40\nCoordMode, Mouse, Screen\n\n');
 
   switch (eventos.type) {
     case 'mouseclick':
       button = eventos.button == 1 ? 'Left' : 'Right'
-      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `${eventos.type}, ${button}, ${eventos.x}, ${eventos.y}\n`);
-      fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Sleep, 1000\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot.value}.ahk`, `${eventos.type}, ${button}, ${eventos.x}, ${eventos.y}\n`);
+      fs.appendFileSync(`bots/${atalhoNomeBot.value}.ahk`, `Sleep, 1000\n`);
       break;
     case 'keydown':
-        if(eventos.keycode == '1'){//se apertar o ESC para de detectar os eventos e cria o bot
-          iohook.removeAllListeners()
-          alert(`Criado o bot! BASTA TECLAR ${atalhoChamada} PARA CHAMAR`)
-          return;
-        }
+      if (eventos.keycode == '1') {//se apertar o ESC para de detectar os eventos e cria o bot
+        iohook.removeAllListeners()
+        alert(`Criado o bot! BASTA TECLAR ${atalhoChamada} PARA CHAMAR`)
+        atalhoNomeBot.value = ''
+        return;
+      }
 
-        data = await lerArquivo('hotkeys.json')
-        fs.appendFileSync(`bots/${atalhoNomeBot}.ahk`, `Send, ${data[eventos.keycode]}\n`);
+      data = await lerArquivoJSON('hotkeys.json')
+      fs.appendFileSync(`bots/${atalhoNomeBot.value}.ahk`, `Send, ${data[eventos.keycode]}\n`);
+      break;
     default:
       "botao nao reconhecido"
       break;
   }
 
-  async function lerArquivo(arquivo) {
+  async function lerArquivoJSON(arquivo) {
     try {
-        const data = await fsPromise.readFile(arquivo, 'utf8');
-        return JSON.parse(data);
+      const data = await fsPromise.readFile(arquivo, 'utf8');
+      return JSON.parse(data);
     } catch (err) {
-        console.error('Erro ao ler o arquivo:', err);
-        throw err;
+      console.error('Erro ao ler o arquivo:', err);
+      throw err;
     }
   }
 

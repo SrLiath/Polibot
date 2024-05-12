@@ -16,6 +16,10 @@
 }
 
 .countdown {
+    position: absolute;
+    z-index: 1;
+    top: 350px;
+    right: 350px;
     font-size: 40px;
     text-align: center;
     margin-top: 100px;
