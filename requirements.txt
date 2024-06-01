@@ -1,0 +1,8 @@
+pyautogui
+speechrecognition
+pynput
+pyaudio
+keyboard
+pywebview
+eel
+windows-toasts

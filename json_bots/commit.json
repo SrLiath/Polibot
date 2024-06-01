@@ -1,0 +1,342 @@
+[
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "ctrl_l",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1742,
+        "y": 56,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1742,
+        "y": 56,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1742,
+        "y": 56,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 1742,
+        "y": 56,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 181,
+        "y": 1039,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "d",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "c",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "o",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "m",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "i",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "tab",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "enter",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
+    }
+]

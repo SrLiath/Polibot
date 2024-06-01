@@ -1,0 +1,55 @@
+#tela3 #firstRow {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-left: 60px;
+}
+
+#tela3 p {
+    font-size: 17px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#tela3 {
+    color: white
+}
+
+#tela3 #firstRow h3 {
+    margin-left: 20px;
+}
+
+#tela3 #secondRow {
+    margin-left: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h5 {
+    margin-top: 10px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.features {
+    margin-top: 20px;
+}
+
+.feature {
+    margin-bottom: 10px;
+}
+
+.feature strong {
+    color: white;
+}

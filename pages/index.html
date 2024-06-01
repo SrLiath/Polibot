@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Polibot</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tela1.css">
+  <link rel="stylesheet" href="css/tela2.css">
+  <link rel="stylesheet" href="css/tela3.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script defer src="js/script.js"></script>
+  <script defer src="js/py_api.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Reddit+Mono:wght@200..900&display=swap');
+
+    body {
+      background-color: #1B2029;
+      font-family: "Dosis", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    #sidebar {
+      color: white;
+      width: 60px;
+    }
+
+
+    #sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #sidebar .btn:hover {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- INICIO DO MENU LATERAL -->
+
+  <div id="sidebar">
+    <div style="border-right: 1px solid #28343D; padding-top: 150px; padding-bottom: 150px;">
+      <div style="height: 10px;"></div>
+      <ul>
+        <li>
+          <button class="btn " onclick="abrirTela('tela1')">
+            <i class="fas fa-home"></i>
+          </button>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <button class="btn " onclick="abrirTela('tela2')">
+            <i class="fa fa-users"></i>
+          </button>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <button class="btn" onclick="abrirTela('tela3')">
+            <i class="fa fa-info"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div style="height: 10px;"></div>
+  </div>
+
+  <!-- FIM DO MENU LATERAL -->
+
+  <div class="content">
+
+
+    <div id="tela1">
+      <div id="firstRow">
+        <h5>Polibot</h5>
+        <button id="countdownButton" class="btn " style="border-radius: 75px; background-color: #213039; color: white;"
+          onclick="openModal()">Gravar
+          Bot</button>
+        <audio id="countdownSound">
+          <source src="assets/song/plim.mp3" type="audio/mp3">
+        </audio>
+      </div>
+      <div id="secondRow">
+        <h4>Lista dos bots</h4>
+      </div>
+      <div id="thirdRow">
+        <table>
+          <thead>
+            <tr>
+              <th class="text-center">Nome do Bot</th>
+              <th class="text-center">Chamada por Atalho</th>
+            </tr>
+          </thead>
+          <tbody id="listBots">
+            <tr>
+              <td>Bot 1</td>
+              <td>Ctrl+D</td>
+            </tr>
+            <tr>
+              <td>Bot 2</td>
+              <td>Ctrl+A</td>
+            </tr>
+            <tr>
+              <td>Bot 3</td>
+              <td>Ctrl+S</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+
+
+    <div id="tela2" class="d-none">
+      <div id="firstRow">
+        <h5>Polibot - Integrantes</h5>
+      </div>
+      <div id="secondRow">
+        <div id="cards">
+          <div class="card">
+            <img src="https://avatars.githubusercontent.com/u/86482642?v=4" alt="Integrante 1">
+            <h4>John</h4>
+            <p>Desenvolvedor FullStack | DBA | Python/NodeJs</p>
+            <p>Email: Santos.jonathan.jj@gmail.com</p>
+          </div>
+          <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <h4>Renan Baratella</h4>
+            <p>Ciencias da Computação</p>
+            <p>5° Semestre</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://avatars.githubusercontent.com/u/107010062?s=400&u=a621d6b180de3b076c69d3b91929fb4dfaa11b1e&v=4"
+              alt="Integrante 1">
+            <h4>Gabriel Proença</h4>
+            <p>Desenvolvedor Front-end</p>
+            <p>Email: eduardogabs020@gmail.com</p>
+          </div>
+          <div class="card" id="quartoCard">
+            <img src="https://via.placeholder.com/150" alt="Integrante 1">
+            <h4>Jose</h4>
+            <p>Desenvolvedor Front-end</p>
+            <p>Email: integrante1@example.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tela3" class="d-none">
+      <div id="firstRow">
+        <h5>Polibot - Sobre</h5>
+      </div>
+      <div id="secondRow">
+        <div class="container">
+
+          <div>
+            <h1>Polibot - Automação de Processos Desktop</h1>
+            <p>O Polibot é um programa em fase alpha, versão 0.0.4, projetado para automatizar processos desktop. Sua
+              principal funcionalidade é a criação e execução de bots, permitindo que usuários configurem tarefas
+              automatizadas de forma simples e eficiente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <h3>PRESSIONE ESC PARA FINALIZAR</h3>
+      <label for="input1" class="input-label">Informe uma das opções:</label>
+      <select id="opcao">
+        <option value="op1">Chamada por atalho</option>
+        <!-- <option value="op2">Chamada por voz</option> -->
+      </select>
+      <div id="op1" class="selected">
+        <label for="nomeBot">Digite o nome do programa:</label>
+        <input type="text" class="input" id="atalhoNomeBot" name="nomeBot" placeholder="ex: Bot1">
+        <h5>Atalho disponível para chamada do bot:</h5>
+        <select id="atalhoChamada">
+          <option value="CTRL+D">Ctrl+D</option>
+          <option value="CTRL+A">Ctrl+A</option>
+          <option value="CTRL+S">Ctrl+S</option>
+          <option value="CTRL+F">Ctrl+F</option>
+        </select>
+      </div>
+      <div id="op2" class="selected" style="display: none;">
+        <label for="campo1">Informe o nome do programa: </label>
+        <input type="text" id="vozNomeBot" class="input" placeholder="Digite algo aqui">
+        <label for="campo2">Informe o nome para chamada de voz: </label>
+        <input type="text" id="vozChamada" class="input" placeholder="Digite algo aqui">
+      </div>
+      <button id="submitBtn">Avançar</button>
+    </div>
+  </div>
+  <div>
+
+
+
+
+
+    <div class="window-buttons">
+      <button class="btn btn-close" id="minimize-btn">
+        <i class="fa fa-window-minimize"></i>
+      </button>
+      <button class="btn btn-close" id="expand-btn">
+        <i id="fullscreen-icon" class="fas fa-expand"></i>
+      </button>
+      <button class="btn btn-close" id="close-btn">
+        <i class="fas fa-times-circle"></i>
+      </button>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+</body>
+
+</html>

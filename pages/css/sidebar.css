@@ -1,0 +1,40 @@
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #1B2029;
+    transition: width 0.3s;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar .btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    text-align: center;
+}
+
+#sidebar ul li:hover {
+    background-color: #444;
+}
+
+#sidebar ul li:active {
+    background-color: grey;
+}
