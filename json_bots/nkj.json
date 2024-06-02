@@ -1,0 +1,26 @@
+[
+    {
+        "type": "click",
+        "x": 1303,
+        "y": 798,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1303,
+        "y": 798,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
+    }
+]

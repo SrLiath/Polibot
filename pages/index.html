@@ -11,10 +11,12 @@
   <link rel="stylesheet" href="css/tela3.css">
   <link rel="stylesheet" href="css/sidebar.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/loading.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script defer src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script defer src="js/py_api.js"></script>
+  <script defer src="js/script.js"></script>
+
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Reddit+Mono:wght@200..900&display=swap');
@@ -93,30 +95,26 @@
         <h4>Lista dos bots</h4>
       </div>
       <div id="thirdRow">
-        <table>
-          <thead>
-            <tr>
-              <th class="text-center">Nome do Bot</th>
-              <th class="text-center">Chamada por Atalho</th>
-            </tr>
-          </thead>
-          <tbody id="listBots">
-            <tr>
-              <td>Bot 1</td>
-              <td>Ctrl+D</td>
-            </tr>
-            <tr>
-              <td>Bot 2</td>
-              <td>Ctrl+A</td>
-            </tr>
-            <tr>
-              <td>Bot 3</td>
-              <td>Ctrl+S</td>
-            </tr>
-          </tbody>
-
-        </table>
+        <div style="max-height: 300px; overflow-y: auto;">
+          <table>
+            <div id="loading" style="display: block;">
+              <div id="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+              </div>
+              <div id="loading-text">Carregando...</div>
+            </div>
+            <thead>
+              <tr>
+                <th class="text-center">Nome do Bot</th>
+                <th class="text-center">Chamada por Atalho</th>
+              </tr>
+            </thead>
+            <tbody id="listBots">
+            </tbody>
+          </table>
+        </div>
       </div>
+
     </div>
 
 
@@ -189,10 +187,32 @@
         <input type="text" class="input" id="atalhoNomeBot" name="nomeBot" placeholder="ex: Bot1">
         <h5>Atalho disponível para chamada do bot:</h5>
         <select id="atalhoChamada">
-          <option value="CTRL+D">Ctrl+D</option>
-          <option value="CTRL+A">Ctrl+A</option>
-          <option value="CTRL+S">Ctrl+S</option>
-          <option value="CTRL+F">Ctrl+F</option>
+          <option value="CTRL+a">Ctrl+A</option>
+          <option value="CTRL+b">Ctrl+B</option>
+          <option value="CTRL+c">Ctrl+C</option>
+          <option value="CTRL+d">Ctrl+D</option>
+          <option value="CTRL+e">Ctrl+E</option>
+          <option value="CTRL+f">Ctrl+F</option>
+          <option value="CTRL+g">Ctrl+G</option>
+          <option value="CTRL+h">Ctrl+H</option>
+          <option value="CTRL+i">Ctrl+I</option>
+          <option value="CTRL+j">Ctrl+J</option>
+          <option value="CTRL+k">Ctrl+K</option>
+          <option value="CTRL+l">Ctrl+L</option>
+          <option value="CTRL+m">Ctrl+M</option>
+          <option value="CTRL+n">Ctrl+N</option>
+          <option value="CTRL+o">Ctrl+O</option>
+          <option value="CTRL+p">Ctrl+P</option>
+          <option value="CTRL+q">Ctrl+Q</option>
+          <option value="CTRL+r">Ctrl+R</option>
+          <option value="CTRL+s">Ctrl+S</option>
+          <option value="CTRL+t">Ctrl+T</option>
+          <option value="CTRL+u">Ctrl+U</option>
+          <option value="CTRL+v">Ctrl+V</option>
+          <option value="CTRL+w">Ctrl+W</option>
+          <option value="CTRL+x">Ctrl+X</option>
+          <option value="CTRL+y">Ctrl+Y</option>
+          <option value="CTRL+z">Ctrl+Z</option>
         </select>
       </div>
       <div id="op2" class="selected" style="display: none;">
@@ -222,10 +242,8 @@
       </button>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-
 </body>
 
 </html>

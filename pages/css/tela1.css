@@ -22,7 +22,24 @@
 
 #tela1 #thirdRow {
     margin-left: 60px;
+    border-radius: 10px;
+
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 
 table {
     width: 98%;
@@ -65,4 +82,8 @@ table td:last-child {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
     font-size: 12px;
+}
+
+#listBots {
+    color: white
 }

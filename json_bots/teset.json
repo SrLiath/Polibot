@@ -1,0 +1,40 @@
+[
+    {
+        "type": "click",
+        "x": 1264,
+        "y": 639,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 1264,
+        "y": 639,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "click",
+        "x": 820,
+        "y": 654,
+        "button": "Button.left",
+        "pressed": true
+    },
+    {
+        "type": "click",
+        "x": 820,
+        "y": 654,
+        "button": "Button.left",
+        "pressed": false
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": true
+    },
+    {
+        "type": "keypress",
+        "key": "esc",
+        "pressed": false
+    }
+]

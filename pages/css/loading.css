@@ -1,0 +1,32 @@
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Azul neon com transparência */
+    z-index: 9999;
+}
+
+#loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+}
+
+#loading-text {
+    position: absolute;
+    top: calc(50% + 50px);
+    /* Posiciona o texto abaixo do spinner */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}

@@ -5,5 +5,54 @@
         "call": {
             "voice": "gravar"
         }
+    },
+    {
+        "path": "..\\json_bots\\commit.json",
+        "botname": "commit",
+        "call": {
+            "voice": "gravar"
+        }
+    },
+    {
+        "path": ".\\json_bots\\nkj.json",
+        "botname": "nkj",
+        "call": {
+            "key": "CTRL+D"
+        }
+    },
+    {
+        "path": ".\\json_bots\\nhiij.json",
+        "botname": "nhiij",
+        "call": {
+            "key": "CTRL+D"
+        }
+    },
+    {
+        "path": ".\\json_bots\\teset.json",
+        "botname": "teset",
+        "call": {
+            "key": "CTRL+D"
+        }
+    },
+    {
+        "path": ".\\json_bots\\asdf.json",
+        "botname": "asdf",
+        "call": {
+            "key": "\\x04"
+        }
+    },
+    {
+        "path": ".\\json_bots\\popn.json",
+        "botname": "popn",
+        "call": {
+            "key": "\\x04"
+        }
+    },
+    {
+        "path": ".\\json_bots\\lhh.json",
+        "botname": "lhh",
+        "call": {
+            "key": "\\x04"
+        }
     }
 ]
