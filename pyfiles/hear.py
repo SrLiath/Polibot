@@ -17,7 +17,7 @@ def ouvir_audio():
             print(f"Você disse: {texto}")
             
             # Lê o arquivo JSON com os comandos
-            with open('.\\json_bots\\bots.json', 'r') as f:
+            with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json')), 'r') as f:
                 commands = json.load(f)
             
             for command in commands:

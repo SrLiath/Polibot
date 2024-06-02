@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import argparse
+import os
 from pynput import mouse, keyboard
 import json
 from windows_toasts import Toast, WindowsToaster
@@ -81,12 +82,8 @@ def gravar(nome, call, type):
     keyboard_listener.start()
     
     keyboard_listener.join()
-    filename = '.\\json_bots\\'
-    filename += nome + '.json'
-
-
-
-    with open('.\\json_bots\\bots.json', 'r', encoding='utf-8') as arquivo_json:
+    filename = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', nome + '.json'))
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json')), 'r', encoding='utf-8') as arquivo_json:
         dados_existente = json.load(arquivo_json)
     print(type)
     if type == 0:
@@ -104,7 +101,7 @@ def gravar(nome, call, type):
     # Adicione o novo objeto à lista existente
     dados_existente.append(botJson)
     # Escreva os dados atualizados de volta para o arquivo JSON
-    with open('.\\json_bots\\bots.json', 'w', encoding='utf-8') as arquivo_json:
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json')), 'w', encoding='utf-8') as arquivo_json:
         json.dump(dados_existente, arquivo_json, indent=4)
 
     # Salve os comandos em um arquivo JSON
