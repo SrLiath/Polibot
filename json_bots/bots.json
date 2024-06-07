@@ -1,7 +1,21 @@
 [
     {
-        "path": "C:\\Users\\guima\\jojo\\Polibot\\CRIA\\json_bots\\sadad.json",
-        "botname": "sadad",
+        "path": "C:\\Users\\Renan\\Desktop\\polibot-python\\json_bots\\1.json",
+        "botname": "1",
+        "call": {
+            "key": "\\x01"
+        }
+    },
+    {
+        "path": "C:\\Users\\Renan\\Desktop\\polibot-python\\json_bots\\2.json",
+        "botname": "2",
+        "call": {
+            "key": "\\x01"
+        }
+    },
+    {
+        "path": "C:\\Users\\Renan\\Desktop\\polibot-python\\json_bots\\3.json",
+        "botname": "3",
         "call": {
             "key": "\\x01"
         }

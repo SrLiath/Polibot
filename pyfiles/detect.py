@@ -99,6 +99,8 @@ def gravar(nome, call, type):
         }
     }
 
+    
+
     # Adicione o novo objeto à lista existente
     dados_existente.append(botJson)
     # Escreva os dados atualizados de volta para o arquivo JSON

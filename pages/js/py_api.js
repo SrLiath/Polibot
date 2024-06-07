@@ -52,7 +52,13 @@ function convertKey(key) {
     return final || key;
 }
 window.receiveData = function (data) {
+    const listbots = document.getElementById('listBots')
+    const atalhoNomeBot = document.getElementById('atalhoNomeBot')
+    atalhoNomeBot.value = '' //limpar o input apos criar o bot
+    listbots.innerHTML = ''  
+
     data = data.replace(/\\/g, '\\\\')
+
     var bots = JSON.parse(data)
     bots.forEach(function (bot) {
         var row = document.createElement('tr')
@@ -63,7 +69,8 @@ window.receiveData = function (data) {
 
         row.appendChild(nameCell)
         row.appendChild(callCell)
-        document.getElementById('listBots').appendChild(row)
+        
+        listbots.appendChild(row)
     })
 
     // Esconde o elemento de carregamento
