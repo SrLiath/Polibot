@@ -13,6 +13,11 @@ function abrirTela(tela) {
 
   console.log(telaSelecionada)
 
+  if(telaSelecionada.id === 'tela1'){
+    telaSelecionada.children[2].children[0].classList.remove('d-none')
+    telaSelecionada.children[2].children[0].children[0].classList.remove('d-none')
+  }
+
 
   for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
     telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')

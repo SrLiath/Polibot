@@ -18,14 +18,15 @@ commands = []
 #     commands.append(command)
 
 def on_click(x, y, button, pressed):
-    command = {
-        'type': 'click',
-        'x': x,
-        'y': y,
-        'button': str(button),
-        'pressed': pressed
-    }
-    commands.append(command)
+    if pressed:
+        command = {
+            'type': 'click',
+            'x': x,
+            'y': y,
+            'button': str(button),
+            'pressed': pressed
+        }
+        commands.append(command)
 
 def on_press(key):
     try:
@@ -97,6 +98,8 @@ def gravar(nome, call, type):
             caller: call
         }
     }
+
+    
 
     # Adicione o novo objeto à lista existente
     dados_existente.append(botJson)
