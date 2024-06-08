@@ -14,7 +14,7 @@ class MyJSAPI:
     def fullscreen(self):
         webview.windows[0].toggle_fullscreen()
     
-    def detect(self,options):
+    def detect(self, options):
         if 'Key' in options:
             call = options['Key']
         else:
@@ -39,9 +39,13 @@ class MyJSAPI:
             time.sleep(1)
         
     def send_data_to_html(self, data):
-        data_str = json.dumps(data) 
-        js_code = f"window.receiveData('{data_str}');"
-        webview.windows[0].evaluate_js(js_code)
-        
+        try:
+            data_str = json.dumps(data) 
+            js_code = f"window.receiveData({json.dumps(data_str)});"
+            print(f"Executing JavaScript: {js_code}")  # Debug print
+            webview.windows[0].evaluate_js(js_code)
+        except Exception as e:
+            print(f"Error sending data to HTML: {e}")
+
     def confirm(self):
         pass

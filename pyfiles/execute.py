@@ -6,17 +6,42 @@ import pyautogui
 import argparse
 from pynput import keyboard
 import speech_recognition as sr
-import threading
+
+from pyfiles.helpers import thread
 
 pyautogui.FAILSAFE = False
 
+parar = False
+
+def press(key):
+    global parar
+    try:
+        if key == keyboard.Key.esc:
+            parar = True
+            return False
+    except Exception as e:
+        print(f"Erro: {e}")
+        
+def check():
+    with keyboard.Listener(
+        on_press=lambda key: press(key),
+        ) as listener:
+        listener.join()
+
+        
+        
 def executar_comandos(filename):
+    global parar
+    parar = False
+    thread(check)
     print(f'Executando comandos do arquivo: {filename}')
     with open(filename, 'r') as file:
         commands = json.load(file)
 
 
     for command in commands:
+        if parar == True:
+            break
         command_type = command['type']
 
         if command_type == 'move':
@@ -52,33 +77,3 @@ def executar_comandos(filename):
                 pyautogui.keyUp(key)
 
     print('Comandos executados com sucesso.')
-
-def on_press(key):
-    try:
-        texto = key.char
-        print(f"Você pressionou: {texto}")
-        for command in args.commands:
-            if command.startswith('-a'):
-                teclas = command.split(':')[1].split('+')
-                filename = command.split(':')[2]
-                if set(teclas) <= set(texto.lower().split()):
-                    if os.path.isfile(filename):
-                        executar_comandos(filename)
-                    else:
-                        print(f"Arquivo não encontrado: {filename}")
-            else:
-                palavra = command.split(':')[0]
-                filename = command.split(':')[1]
-                if texto.lower() == palavra.lower():
-                    if os.path.isfile(filename):
-                        executar_comandos(filename)
-                    else:
-                        print(f"Arquivo não encontrado: {filename}")
-    except AttributeError:
-        pass
-
-def ouvir_teclas():
-    with keyboard.Listener(on_press=on_press) as listener:
-        listener.join()
-
-

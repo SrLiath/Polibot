@@ -55,7 +55,7 @@ window.receiveData = function (data) {
     const listbots = document.getElementById('listBots')
     const atalhoNomeBot = document.getElementById('atalhoNomeBot')
     atalhoNomeBot.value = '' //limpar o input apos criar o bot
-    listbots.innerHTML = ''  
+    listbots.innerHTML = ''
 
     data = data.replace(/\\/g, '\\\\')
 
@@ -69,7 +69,7 @@ window.receiveData = function (data) {
 
         row.appendChild(nameCell)
         row.appendChild(callCell)
-        
+
         listbots.appendChild(row)
     })
 
@@ -112,20 +112,23 @@ const displayCountdown = count => {
     }, 1000)
 }
 
+let countdownInterval;
+
 function gravarBot() {
-    let countdown = 3
-
-    let countdownInterval = setInterval(() => {
+    let countdown = 3;
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+    countdownInterval = setInterval(() => {
         if (countdown === 0) {
-            clearInterval(countdownInterval)
-            countdownSound.play()
-            iniciarBot()
+            clearInterval(countdownInterval);
+            countdownSound.play();
+            iniciarBot();
         } else {
-            displayCountdown(countdown)
-            countdown--
+            displayCountdown(countdown);
+            countdown--;
         }
-    }, 1000)
-
+    }, 1000);
 }
 
 

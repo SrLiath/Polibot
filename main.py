@@ -15,7 +15,8 @@ def start_window():
     thread(ouvir_audio)
     thread(key)
     window = webview.create_window('Polibot', index_file, js_api=js_api, frameless=True)
-    webview.start(debug=True)
+    # webview.start(debug=True)
+    webview.start()
 
 if __name__ == '__main__':
     start_window()
