@@ -15,11 +15,8 @@ class MyJSAPI:
         webview.windows[0].toggle_fullscreen()
 
     def apagarBot(self, path, botname):
-        with open(path, 'r') as arquivo:
-            dados = json.load(arquivo)
-
         os.remove(path)
-
+        
         path_bots = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
         with open(path_bots, 'r') as arquivo:
             dados = json.load(arquivo)
