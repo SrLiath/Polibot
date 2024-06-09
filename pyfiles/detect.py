@@ -29,7 +29,6 @@ def on_click(x, y, button, pressed):
             'pressed': pressed
         }
         commands.append(command)
-    print('oi')
 
 # def on_press(key):
 #     try:
@@ -54,13 +53,6 @@ def on_release(key):
         key_name = key.char
     except AttributeError:
         key_name = key.name
-
-    command = {
-        'type': 'keypress',
-        'key': key_name,
-        'pressed': True
-    }
-    commands.append(command)
     if key == keyboard.Key.esc:
         webview.windows[0].show()
         try:
@@ -76,6 +68,13 @@ def on_release(key):
         except:
             pass
         return False
+    command = {
+        'type': 'keypress',
+        'key': key_name,
+        'pressed': True
+    }
+    commands.append(command)
+
 
 def gravar(nome, call, type):
     global commands, mouse_listener, keyboard_listener
