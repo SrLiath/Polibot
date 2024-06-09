@@ -8,7 +8,8 @@ from windows_toasts import Toast, WindowsToaster
 import webview
 
 commands = []
-
+mouse_listener = None
+keyboard_listener = None
 # def on_move(x, y):
 #     command = {
 #         'type': 'move',
@@ -18,6 +19,7 @@ commands = []
 #     commands.append(command)
 
 def on_click(x, y, button, pressed):
+    global commands
     if pressed:
         command = {
             'type': 'click',
@@ -27,6 +29,7 @@ def on_click(x, y, button, pressed):
             'pressed': pressed
         }
         commands.append(command)
+    print('oi')
 
 # def on_press(key):
 #     try:
@@ -45,6 +48,8 @@ def on_click(x, y, button, pressed):
 #         commands.append(command)
 
 def on_release(key):
+    global commands, mouse_listener, keyboard_listener
+    
     try:
         key_name = key.char
     except AttributeError:
@@ -64,14 +69,16 @@ def on_release(key):
             newToast.text_fields = ['Bot gravado com sucesso!']
             newToast.on_activated = lambda _: webview.windows[0].show()
             toaster.show_toast(newToast)
+            if mouse_listener is not None:
+                mouse_listener.stop()
+            if keyboard_listener is not None:
+                keyboard_listener.stop()
         except:
             pass
         return False
 
 def gravar(nome, call, type):
-    print('Gravador de comandos iniciado. Pressione Esc para parar.')
-
-    
+    global commands, mouse_listener, keyboard_listener
     mouse_listener = mouse.Listener(
         # on_move=on_move,
         on_click=on_click)
@@ -101,14 +108,10 @@ def gravar(nome, call, type):
 
     
 
-    # Adicione o novo objeto à lista existente
     dados_existente.append(botJson)
-    # Escreva os dados atualizados de volta para o arquivo JSON
     with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json')), 'w', encoding='utf-8') as arquivo_json:
         json.dump(dados_existente, arquivo_json, indent=4)
 
-    # Salve os comandos em um arquivo JSON
     with open(filename, 'w', encoding='utf-8') as file:
         json.dump(commands, file, indent=4)
-
-    print(f'Comandos gravados no arquivo: {filename}')
+    commands.clear()
