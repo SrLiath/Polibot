@@ -13,6 +13,26 @@ class MyJSAPI:
 
     def fullscreen(self):
         webview.windows[0].toggle_fullscreen()
+
+    def apagarBot(self, path, botname):
+        with open(path, 'r') as arquivo:
+            dados = json.load(arquivo)
+
+        os.remove(path)
+
+        path_bots = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(path_bots, 'r') as arquivo:
+            dados = json.load(arquivo)
+
+        for item in dados[:]:  # Usando [:] para criar uma cópia da lista
+            if item['botname'] == botname:
+                dados.remove(item)
+
+        with open(path_bots, 'w') as arquivo:
+            json.dump(dados, arquivo, indent=4)
+
+
+        return True
     
     def detect(self, options):
         if 'Key' in options:

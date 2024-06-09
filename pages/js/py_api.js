@@ -77,7 +77,8 @@ window.receiveData = function (data) {
         tagI.classList.add('fa', 'fa-trash')
 
         buttonExcluir.addEventListener('click', () => {
-            alert(JSON.stringify(bot))
+            if(window.pywebview.api.apagarBot(bot['path'], bot['botname']))
+                alert(bot['botname'] + ' deletado com sucesso')
         })
 
         buttonExcluir.appendChild(tagI)
