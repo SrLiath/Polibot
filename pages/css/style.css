@@ -7,7 +7,7 @@ body {
 .window-buttons {
   position: fixed;
   top: 10px;
-  right: 0px;
+  right: 10px;
   z-index: 9999;
 }
 
@@ -26,4 +26,8 @@ li button:hover {
 
 .btn-close {
   color: white
+}
+
+.btn {
+  background-color: transparent;
 }
