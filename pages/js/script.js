@@ -39,7 +39,6 @@ function openModal() { //chama no html
     modal.style.display = "none";
   });
   submitBtn.addEventListener("click", (e) => {
-    checarSeTemMesmoNomeDeBotOuAtalho('bots.json')
     modal.style.display = "none";
     gravarBot()
   })
