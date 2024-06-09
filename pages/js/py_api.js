@@ -71,6 +71,7 @@ window.receiveData = function (data) {
 
         //botao excluir
         var buttonExcluir = document.createElement('button')
+        buttonExcluir.classList.add('btn')
         var excluirBot = document.createElement('td')
         var tagI = document.createElement('i')
         tagI.classList.add('fa', 'fa-trash')
@@ -81,7 +82,7 @@ window.receiveData = function (data) {
 
         buttonExcluir.appendChild(tagI)
         excluirBot.appendChild(buttonExcluir)
-        
+
         //botao excluir
 
 

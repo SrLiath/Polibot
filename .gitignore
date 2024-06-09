@@ -2,3 +2,4 @@ venv
 *_pycache_*
 json_bots
 build
+json_bots/*
