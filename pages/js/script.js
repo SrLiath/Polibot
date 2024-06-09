@@ -38,7 +38,8 @@ function openModal() { //chama no html
   closeModalBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
-  submitBtn.addEventListener("click", () => {
+  submitBtn.addEventListener("click", (e) => {
+    checarSeTemMesmoNomeDeBotOuAtalho('bots.json')
     modal.style.display = "none";
     gravarBot()
   })
@@ -48,6 +49,8 @@ function openModal() { //chama no html
     allDivs.forEach(div => div.style.display = 'none');
     document.getElementById(opcao.value).style.display = 'block';
   });
+
+  
 
 }
 

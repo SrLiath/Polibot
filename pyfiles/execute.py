@@ -42,7 +42,7 @@ def executar_comandos(filename):
     for command in commands:
         if parar == True:
             break
-        command_type = command['type']
+        command_type = command['type'] 
 
         if command_type == 'move':
             x = command['x']
@@ -54,26 +54,21 @@ def executar_comandos(filename):
             y = command['y']
             button = command['button']
             pressed = command['pressed']
-            time.sleep(0.2)  # Pausa para evitar cliques consecutivos
+            time.sleep(1)  # Pausa para evitar cliques consecutivos
 
             if button == 'Button.left':
                 if pressed:
-                    pyautogui.mouseDown(x, y, 'left')
-                else:
-                    pyautogui.mouseUp(x, y, 'left')
+                    pyautogui.click(x = x, y = y, button = 'left')
+                    time.sleep(0.5)
             elif button == 'Button.right':
                 if pressed:
-                    pyautogui.mouseDown(x, y, 'right')
-                else:
-                    pyautogui.mouseUp(x, y, 'right')
+                    pyautogui.click(x = x, y = y, button = 'right')
 
         elif command_type == 'keypress':
             key = command['key']
             pressed = command['pressed']
             time.sleep(0.1)  # Pausa para evitar pressionamentos consecutivos
             if pressed:
-                pyautogui.keyDown(key)
-            else:
-                pyautogui.keyUp(key)
+                pyautogui.press(key)
 
     print('Comandos executados com sucesso.')

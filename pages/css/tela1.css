@@ -70,6 +70,18 @@ table td:first-child {
     border-bottom-left-radius: 10px;
 }
 
+
+
+table td:last-child button {
+    background-color: #28343D;
+}
+
+table td:last-child button i{
+    color: white;
+}
+
+
+
 table th:last-child,
 table td:last-child {
     border-top-right-radius: 10px;

@@ -28,21 +28,21 @@ def on_click(x, y, button, pressed):
         }
         commands.append(command)
 
-def on_press(key):
-    try:
-        command = {
-            'type': 'keypress',
-            'key': key.char,
-            'pressed': True
-        }
-        commands.append(command)
-    except AttributeError:
-        command = {
-            'type': 'keypress',
-            'key': key.name,
-            'pressed': True
-        }
-        commands.append(command)
+# def on_press(key):
+#     try:
+#         command = {
+#             'type': 'keypress',
+#             'key': key.char,
+#             'pressed': True
+#         }
+#         commands.append(command)
+#     except AttributeError:
+#         command = {
+#             'type': 'keypress',
+#             'key': key.name,
+#             'pressed': True
+#         }
+#         commands.append(command)
 
 def on_release(key):
     try:
@@ -53,7 +53,7 @@ def on_release(key):
     command = {
         'type': 'keypress',
         'key': key_name,
-        'pressed': False
+        'pressed': True
     }
     commands.append(command)
     if key == keyboard.Key.esc:
@@ -78,7 +78,7 @@ def gravar(nome, call, type):
     mouse_listener.start()
     
     keyboard_listener = keyboard.Listener(
-        on_press=on_press,
+        # on_press=on_press,
         on_release=on_release)
     keyboard_listener.start()
     

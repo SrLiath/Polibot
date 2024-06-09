@@ -67,8 +67,27 @@ window.receiveData = function (data) {
         var callCell = document.createElement('td')
         callCell.textContent = bot.call.voice || convertKey(bot.call.key)
 
+
+
+        //botao excluir
+        var buttonExcluir = document.createElement('button')
+        var excluirBot = document.createElement('td')
+        var tagI = document.createElement('i')
+        tagI.classList.add('fa', 'fa-trash')
+
+        buttonExcluir.addEventListener('click', () => {
+            alert(JSON.stringify(bot))
+        })
+
+        buttonExcluir.appendChild(tagI)
+        excluirBot.appendChild(buttonExcluir)
+        
+        //botao excluir
+
+
         row.appendChild(nameCell)
         row.appendChild(callCell)
+        row.appendChild(excluirBot)
 
         listbots.appendChild(row)
     })

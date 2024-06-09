@@ -15,12 +15,12 @@ body {
   margin-left: 5px;
 }
 
-button {
+li button {
   padding: 10px 20px;
   margin: 10px;
 }
 
-button:hover {
+li button:hover {
   background-color: #444;
 }
 
