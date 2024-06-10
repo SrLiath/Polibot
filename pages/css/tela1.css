@@ -71,15 +71,15 @@ table td:first-child {
 }
 
 
-
-table td:last-child button {
+table td:last-child button,
+table td:nth-child(3) button {
     background-color: #28343D;
 }
 
-table td:last-child button i{
-    color: white;
+table td:last-child button i,
+table td:nth-child(3) button i{
+   color: white;
 }
-
 
 
 table th:last-child,

@@ -1,3 +1,8 @@
+
+document.getElementById('close-btn').addEventListener('click', () => window.pywebview.api.close())
+document.getElementById('minimize-btn').addEventListener('click', () => window.pywebview.api.minimize())
+document.getElementById('expand-btn').addEventListener('click', () => window.pywebview.api.fullscreen())
+
 function check() {
     try {
         window.pywebview.api.confirm()
@@ -69,6 +74,26 @@ window.receiveData = function (data) {
         callCell.textContent = bot.call.voice || convertKey(bot.call.key)
 
 
+        //botao editar
+
+        var editBot = document.createElement('td')
+
+        var buttonEdit = document.createElement('button')
+        buttonEdit.classList.add('btn')
+
+        var tagIEdit = document.createElement('i')
+
+        tagIEdit.classList.add('fas', 'fa-edit')
+        buttonEdit.appendChild(tagIEdit)
+        editBot.appendChild(buttonEdit)
+
+        buttonEdit.addEventListener('click', () => {
+            
+        })
+
+        //botao editar
+
+
 
         //botao excluir
         var buttonExcluir = document.createElement('button')
@@ -109,6 +134,7 @@ window.receiveData = function (data) {
 
         row.appendChild(nameCell)
         row.appendChild(callCell)
+        row.appendChild(editBot)
         row.appendChild(excluirBot)
 
         listbots.appendChild(row)
@@ -117,18 +143,6 @@ window.receiveData = function (data) {
     // Esconde o elemento de carregamento
     document.getElementById('loading').style.display = 'none'
 }
-
-document.getElementById('close-btn').addEventListener('click', function () {
-    window.pywebview.api.close()
-})
-
-document.getElementById('minimize-btn').addEventListener('click', function () {
-    window.pywebview.api.minimize()
-})
-
-document.getElementById('expand-btn').addEventListener('click', function () {
-    window.pywebview.api.fullscreen()
-})
 
 const displayCountdown = count => {
     var countdownElement = $('<div>', {
@@ -147,9 +161,7 @@ const displayCountdown = count => {
         textAlign: 'center'
     })
     $('body').append(countdownElement)
-    setTimeout(function () {
-        countdownElement.remove()
-    }, 1000)
+    setTimeout(() => countdownElement.remove(), 1000)
 }
 
 let countdownInterval;
@@ -241,9 +253,7 @@ function iniciarBot() {
 function abrirTela(tela) {
     // Esconder todas as telas
     let telas = document.querySelectorAll('.content div');
-    telas.forEach(element => {
-      element.classList.add('d-none');
-    });
+    telas.forEach(element => element.classList.add('d-none'));
   
     // Mostrar a tela selecionada
     let telaSelecionada = document.getElementById(tela);
@@ -251,13 +261,10 @@ function abrirTela(tela) {
   
     telaSelecionada.children[1].children[0].classList.remove('d-none')
   
-    console.log(telaSelecionada)
-  
     if(telaSelecionada.id === 'tela1'){
       telaSelecionada.children[2].children[0].classList.remove('d-none')
       telaSelecionada.children[2].children[0].children[0].classList.remove('d-none')
     }
-  
   
     for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
       telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
@@ -270,15 +277,14 @@ function abrirTela(tela) {
     }
   }
   
-  function openModal() { //chama no html
+    function openModal() { //chama no html
     const submitBtn = document.getElementById("submitBtn");
     const closeModalBtn = document.getElementById("closeModalBtn")
     modal.style.display = "flex";
   
-    closeModalBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-    submitBtn.addEventListener("click", (e) => {
+    closeModalBtn.addEventListener("click", () => modal.style.display = "none");
+
+    submitBtn.addEventListener("click", () => {
       modal.style.display = "none";
       gravarBot()
     })
@@ -288,15 +294,13 @@ function abrirTela(tela) {
       allDivs.forEach(div => div.style.display = 'none');
       document.getElementById(opcao.value).style.display = 'block';
     });
-  
-    
-  
+
   }
   
   //evento se clikar fora do modal o modal fecha
-  window.addEventListener('click', event => {
+  window.addEventListener('click', e => {
     const modal = document.getElementById("modal");
-    if (event.target == modal) {
+    if (e.target == modal) {
       modal.style.display = 'none';
     }
   });
