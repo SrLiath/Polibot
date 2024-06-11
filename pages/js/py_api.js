@@ -57,6 +57,29 @@ function convertKey(key) {
     return final || key;
 }
 
+function excluir(bot){
+    Swal.fire({
+        title: `Você tem certeza que deseja deletar o arquivo ${bot['botname']}?`,
+        text: "Não será possível restaurar o arquivo!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sim, deletar!"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            if (window.pywebview.api.apagarBot(bot['path'], bot['botname'])) {
+                Swal.fire({
+                    title: "Deletado com sucesso!",
+                    text: `O arquivo ${bot['botname']} foi deletado!`,
+                    icon: "success"
+                });
+            }
+
+        }
+    });
+}
+
 window.receiveData = function (data) {
     const listbots = document.getElementById('listBots')
     const atalhoNomeBot = document.getElementById('atalhoNomeBot')
@@ -95,6 +118,7 @@ window.receiveData = function (data) {
 
 
 
+
         //botao excluir
         var buttonExcluir = document.createElement('button')
         buttonExcluir.classList.add('btn')
@@ -102,33 +126,12 @@ window.receiveData = function (data) {
         var tagI = document.createElement('i')
         tagI.classList.add('fa', 'fa-trash')
 
-        buttonExcluir.addEventListener('click', () => {
-
-            Swal.fire({
-                title: `Você tem certeza que deseja deletar o arquivo ${bot['botname']}?`,
-                text: "Não será possível restaurar o arquivo!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Sim, deletar!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    if (window.pywebview.api.apagarBot(bot['path'], bot['botname'])) {
-                        Swal.fire({
-                            title: "Deletado com sucesso!",
-                            text: `O arquivo ${bot['botname']} foi deletado!`,
-                            icon: "success"
-                        });
-                    }
-
-                }
-            });
-        })
-
+        
+        
         buttonExcluir.appendChild(tagI)
         excluirBot.appendChild(buttonExcluir)
-
+        
+        buttonExcluir.addEventListener('click', () => excluir(bot))
         //botao excluir
 
 
