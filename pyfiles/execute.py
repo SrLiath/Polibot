@@ -38,37 +38,46 @@ def executar_comandos(filename):
     with open(filename, 'r') as file:
         commands = json.load(file)
 
+    botname = filename.split('\\')[-1].split('.')[0]
 
-    for command in commands:
-        if parar == True:
-            break
-        command_type = command['type'] 
+    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json')), 'r') as bots:
+        file = json.load(bots)
 
-        if command_type == 'move':
-            x = command['x']
-            y = command['y']
-            pyautogui.moveTo(x, y)
+    for bot in file:
+        if(bot['botname'] == botname):
+            loop = bot['loop']
 
-        elif command_type == 'click':
-            x = command['x']
-            y = command['y']
-            button = command['button']
-            pressed = command['pressed']
-            time.sleep(1)  # Pausa para evitar cliques consecutivos
+    for _ in range(loop):
+        for command in commands:
+            if parar == True:
+                break
+            command_type = command['type'] 
 
-            if button == 'Button.left':
+            if command_type == 'move':
+                x = command['x']
+                y = command['y']
+                pyautogui.moveTo(x, y)
+
+            elif command_type == 'click':
+                x = command['x']
+                y = command['y']
+                button = command['button']
+                pressed = command['pressed']
+                time.sleep(1)  # Pausa para evitar cliques consecutivos
+
+                if button == 'Button.left':
+                    if pressed:
+                        pyautogui.click(x = x, y = y, button = 'left')
+                        time.sleep(0.5)
+                elif button == 'Button.right':
+                    if pressed:
+                        pyautogui.click(x = x, y = y, button = 'right')
+
+            elif command_type == 'keypress':
+                key = command['key']
+                pressed = command['pressed']
+                time.sleep(0.1)  # Pausa para evitar pressionamentos consecutivos
                 if pressed:
-                    pyautogui.click(x = x, y = y, button = 'left')
-                    time.sleep(0.5)
-            elif button == 'Button.right':
-                if pressed:
-                    pyautogui.click(x = x, y = y, button = 'right')
+                    pyautogui.press(key)
 
-        elif command_type == 'keypress':
-            key = command['key']
-            pressed = command['pressed']
-            time.sleep(0.1)  # Pausa para evitar pressionamentos consecutivos
-            if pressed:
-                pyautogui.press(key)
-
-    print('Comandos executados com sucesso.')
+        print('Comandos executados com sucesso.')

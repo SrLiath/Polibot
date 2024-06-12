@@ -185,35 +185,43 @@
       <div id="op1" class="selected">
         <label for="nomeBot">Digite o nome do programa:</label>
         <input type="text" class="input" id="atalhoNomeBot" name="nomeBot" placeholder="ex: Bot1">
-        <h5>Atalho disponível para chamada do bot:</h5>
-        <select id="atalhoChamada">
-          <option value="CTRL+a">Ctrl+A</option>
-          <option value="CTRL+b">Ctrl+B</option>
-          <option value="CTRL+c">Ctrl+C</option>
-          <option value="CTRL+d">Ctrl+D</option>
-          <option value="CTRL+e">Ctrl+E</option>
-          <option value="CTRL+f">Ctrl+F</option>
-          <option value="CTRL+g">Ctrl+G</option>
-          <option value="CTRL+h">Ctrl+H</option>
-          <option value="CTRL+i">Ctrl+I</option>
-          <option value="CTRL+j">Ctrl+J</option>
-          <option value="CTRL+k">Ctrl+K</option>
-          <option value="CTRL+l">Ctrl+L</option>
-          <option value="CTRL+m">Ctrl+M</option>
-          <option value="CTRL+n">Ctrl+N</option>
-          <option value="CTRL+o">Ctrl+O</option>
-          <option value="CTRL+p">Ctrl+P</option>
-          <option value="CTRL+q">Ctrl+Q</option>
-          <option value="CTRL+r">Ctrl+R</option>
-          <option value="CTRL+s">Ctrl+S</option>
-          <option value="CTRL+t">Ctrl+T</option>
-          <option value="CTRL+u">Ctrl+U</option>
-          <option value="CTRL+v">Ctrl+V</option>
-          <option value="CTRL+w">Ctrl+W</option>
-          <option value="CTRL+x">Ctrl+X</option>
-          <option value="CTRL+y">Ctrl+Y</option>
-          <option value="CTRL+z">Ctrl+Z</option>
-        </select>
+        <div style="display:flex;flex-direction:row;width:80%; margin: auto">
+          <div>
+            <h5>Atalho disponível:</h5>
+            <select id="atalhoChamada">
+              <option value="CTRL+a">Ctrl+A</option>
+              <option value="CTRL+b">Ctrl+B</option>
+              <option value="CTRL+c">Ctrl+C</option>
+              <option selected value="CTRL+d">Ctrl+D</option>
+              <option value="CTRL+e">Ctrl+E</option>
+              <option value="CTRL+f">Ctrl+F</option>
+              <option value="CTRL+g">Ctrl+G</option>
+              <option value="CTRL+h">Ctrl+H</option>
+              <option value="CTRL+i">Ctrl+I</option>
+              <option value="CTRL+j">Ctrl+J</option>
+              <option value="CTRL+k">Ctrl+K</option>
+              <option value="CTRL+l">Ctrl+L</option>
+              <option value="CTRL+m">Ctrl+M</option>
+              <option value="CTRL+n">Ctrl+N</option>
+              <option value="CTRL+o">Ctrl+O</option>
+              <option value="CTRL+p">Ctrl+P</option>
+              <option value="CTRL+q">Ctrl+Q</option>
+              <option value="CTRL+r">Ctrl+R</option>
+              <option value="CTRL+s">Ctrl+S</option>
+              <option value="CTRL+t">Ctrl+T</option>
+              <option value="CTRL+u">Ctrl+U</option>
+              <option value="CTRL+v">Ctrl+V</option>
+              <option value="CTRL+w">Ctrl+W</option>
+              <option value="CTRL+x">Ctrl+X</option>
+              <option value="CTRL+y">Ctrl+Y</option>
+              <option value="CTRL+z">Ctrl+Z</option>
+            </select>
+          </div>
+          <div style="display:flex; flex-direction: column; justify-content: space-around;">
+            <h5>Loop:</h5>
+            <input type="number" id="loop" name="loop" value="1">
+          </div>
+        </div>
       </div>
       <div id="op2" class="selected" style="display: none;">
         <label for="campo1">Informe o nome do programa: </label>

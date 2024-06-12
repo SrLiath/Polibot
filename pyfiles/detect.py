@@ -76,7 +76,7 @@ def on_release(key):
     commands.append(command)
 
 
-def gravar(nome, call, type):
+def gravar(nome, call, type, loop):
     global commands, mouse_listener, keyboard_listener
     mouse_listener = mouse.Listener(
         # on_move=on_move,
@@ -100,6 +100,7 @@ def gravar(nome, call, type):
     botJson = {
         "path": filename,
         "botname": nome,
+        "loop": int(loop),
         "call": {
             caller: call
         }

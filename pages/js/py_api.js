@@ -57,7 +57,7 @@ function convertKey(key) {
     return final || key;
 }
 
-function excluir(bot){
+function excluir(bot) {
     Swal.fire({
         title: `Você tem certeza que deseja deletar o arquivo ${bot['botname']}?`,
         text: "Não será possível restaurar o arquivo!",
@@ -111,7 +111,7 @@ window.receiveData = function (data) {
         editBot.appendChild(buttonEdit)
 
         buttonEdit.addEventListener('click', () => {
-            
+
         })
 
         //botao editar
@@ -126,11 +126,11 @@ window.receiveData = function (data) {
         var tagI = document.createElement('i')
         tagI.classList.add('fa', 'fa-trash')
 
-        
-        
+
+
         buttonExcluir.appendChild(tagI)
         excluirBot.appendChild(buttonExcluir)
-        
+
         buttonExcluir.addEventListener('click', () => excluir(bot))
         //botao excluir
 
@@ -234,12 +234,14 @@ function iniciarBot() {
     const caractereDeControle = converterAtalhoParaControle(atalhoChamada)
     const vozNomeBot = document.getElementById('vozNomeBot').value
     const vozChamada = document.getElementById('vozChamada').value
+    const loop = document.getElementById('loop').value
 
     if (opcao.value == 'op1') {
         headers = {
             "Option": 0,
             "Name": atalhoNomeBot,
-            "Key": caractereDeControle
+            "Key": caractereDeControle,
+            "Loop": loop
         }
     } else if (opcao.value == 'op2') {
         headers = {
@@ -257,55 +259,59 @@ function abrirTela(tela) {
     // Esconder todas as telas
     let telas = document.querySelectorAll('.content div');
     telas.forEach(element => element.classList.add('d-none'));
-  
+
     // Mostrar a tela selecionada
     let telaSelecionada = document.getElementById(tela);
     telaSelecionada.classList.remove('d-none');
-  
+
     telaSelecionada.children[1].children[0].classList.remove('d-none')
-  
-    if(telaSelecionada.id === 'tela1'){
-      telaSelecionada.children[2].children[0].classList.remove('d-none')
-      telaSelecionada.children[2].children[0].children[0].classList.remove('d-none')
-    }
-  
+
+    if (telaSelecionada.id === 'tela1') {
+        telaSelecionada.children[2].children[0].classList.remove('d-none')
+        telaSelecionada.children[2].children[0].children[0].classList.remove('d-none')
+    }
+
     for (let i = 0; i < telaSelecionada.children[1].children[0].children.length; i++) {
-      telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
+        telaSelecionada.children[1].children[0].children[i].classList.remove('d-none')
     }
-  
+
     for (let i = 0; i < telaSelecionada.children.length; i++) {
-      if (telaSelecionada.children[i].tagName == 'DIV') {
-        telaSelecionada.children[i].classList.remove('d-none')
-      }
+        if (telaSelecionada.children[i].tagName == 'DIV') {
+            telaSelecionada.children[i].classList.remove('d-none')
+        }
     }
-  }
-  
-    function openModal() { //chama no html
+}
+
+function openModal() { //chama no html
     const submitBtn = document.getElementById("submitBtn");
     const closeModalBtn = document.getElementById("closeModalBtn")
+    const loop = document.getElementById("loop")
     modal.style.display = "flex";
-  
-    closeModalBtn.addEventListener("click", () => modal.style.display = "none");
+
+    closeModalBtn.addEventListener("click", () => {
+        loop.value = 1
+        modal.style.display = "none"
+    })
 
     submitBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-      gravarBot()
+        modal.style.display = "none";
+        gravarBot()
     })
-  
+
     opcao.addEventListener('change', () => {
-      var allDivs = document.querySelectorAll('.selected');
-      allDivs.forEach(div => div.style.display = 'none');
-      document.getElementById(opcao.value).style.display = 'block';
+        var allDivs = document.querySelectorAll('.selected');
+        allDivs.forEach(div => div.style.display = 'none');
+        document.getElementById(opcao.value).style.display = 'block';
     });
 
-  }
-  
-  //evento se clikar fora do modal o modal fecha
-  window.addEventListener('click', e => {
+}
+
+//evento se clikar fora do modal o modal fecha
+window.addEventListener('click', () => {
     const modal = document.getElementById("modal");
     if (e.target == modal) {
-      modal.style.display = 'none';
+        loop.value = 1
+        modal.style.display = 'none';
     }
-  });
-  
-  
+});
+
