@@ -126,8 +126,8 @@ class MyJSAPI:
                       with open(item.get("path"), "r") as comands:
                         dados = json.load(comands)
                         if dados:
-                            dados[int(i)]['x'] = x
-                            dados[int(i)]['y'] = y
+                            dados[int(i)]['x'] = int(x)
+                            dados[int(i)]['y'] = int(y)
                             with open(item.get("path"), "w") as comands:
                                 json.dump(dados, comands, indent=4)
                         try:
@@ -136,6 +136,20 @@ class MyJSAPI:
                             webview.windows[0].evaluate_js(js_code)
                         except Exception as e:
                             print(f"Error sending data to HTML: {e}")
+
+    def addTime(self, i, botname):
+        caminho_arquivo = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(caminho_arquivo, "r") as arquivo:
+            dados_json = json.load(arquivo)
+            for item in dados_json:
+                if item.get("botname") == botname:
+                      with open(item.get("path"), "r") as comands:
+                        dados = json.load(comands)
+                        if dados:
+                            dados[int(i)]['sleep'] = dados[int(i)]['sleep'] + 1
+                            with open(item.get("path"), "w") as comands:
+                                json.dump(dados, comands, indent=4)
+                
                             
     def confirm(self):
         pass

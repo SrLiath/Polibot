@@ -62,6 +62,8 @@ function excluir(bot) {
         text: "Não será possível restaurar o arquivo!",
         icon: "warning",
         showCancelButton: true,
+        background: '#28343D',
+        color: 'white',
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Sim, deletar!"
@@ -71,7 +73,9 @@ function excluir(bot) {
                 Swal.fire({
                     title: "Deletado com sucesso!",
                     text: `O arquivo ${bot['botname']} foi deletado!`,
-                    icon: "success"
+                    icon: "success",
+                    background: '#28343D',
+                    color: 'white',
                 });
             }
 
@@ -94,7 +98,6 @@ window.receiveData = function (data) {
         nameCell.textContent = bot.botname
         var callCell = document.createElement('td')
         callCell.textContent = bot.call.voice || convertKey(bot.call.key)
-
 
         //botao editar
 
@@ -315,4 +318,8 @@ $('#confirmTrocaClick').click(function () {
 
 function remove(i, botname) {
     window.pywebview.api.remove(i, botname)
+}
+
+function addTime(i, botname) {
+    window.pywebview.api.addTime(i, botname)
 }

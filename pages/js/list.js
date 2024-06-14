@@ -28,10 +28,11 @@ window.list = function (dataNoJson, botname) {
             case 'click':
                 $('#list').append(`
                     <li style="display: flex; justify-content: space-between; align-items: center;">
-                        Click | X: ${data[i].x}, Y: ${data[i].y}
+                        Click  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x: ${data[i].x}, y: ${data[i].y}
                         <div>
-                            <button class="btn btn-success" onclick="editClick('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
-                            <button class="btn btn-danger" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
+                            <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo após a execução deste comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar Comando" onclick="editClick('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Apagar comando" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
                         </div>
                     </li>
                 `);
@@ -39,10 +40,11 @@ window.list = function (dataNoJson, botname) {
             case 'keypress':
                 $('#list').append(`
                     <li style="display: flex; justify-content: space-between; align-items: center;">
-                        Tecla | ${data[i].key}
+                        Tecla  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${data[i].key}
                         <div>
-                            <button class="btn btn-success" onclick="editTecla('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
-                            <button class="btn btn-danger" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
+                            <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo para executar o próximo comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar comando" onclick="editTecla('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
+                            <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Apagar comando" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
                         </div>
                     </li>
                 `);

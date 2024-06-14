@@ -26,7 +26,8 @@ def on_click(x, y, button, pressed):
             'x': x,
             'y': y,
             'button': str(button),
-            'pressed': pressed
+            'pressed': pressed,
+            'sleep': 0
         }
         commands.append(command)
 
@@ -71,7 +72,8 @@ def on_release(key):
     command = {
         'type': 'keypress',
         'key': key_name,
-        'pressed': True
+        'pressed': True,
+        'sleep': 0
     }
     commands.append(command)
 
