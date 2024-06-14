@@ -1,4 +1,3 @@
-
 document.getElementById('close-btn').addEventListener('click', () => window.pywebview.api.close())
 document.getElementById('minimize-btn').addEventListener('click', () => window.pywebview.api.minimize())
 document.getElementById('expand-btn').addEventListener('click', () => window.pywebview.api.fullscreen())
@@ -111,14 +110,10 @@ window.receiveData = function (data) {
         editBot.appendChild(buttonEdit)
 
         buttonEdit.addEventListener('click', () => {
-
+            var modal = new bootstrap.Modal(document.getElementById('editModal'))
+            modal.show()
+            window.pywebview.api.commands(bot.botname)
         })
-
-        //botao editar
-
-
-
-
         //botao excluir
         var buttonExcluir = document.createElement('button')
         buttonExcluir.classList.add('btn')
@@ -306,12 +301,18 @@ function openModal() { //chama no html
 
 }
 
-//evento se clikar fora do modal o modal fecha
-window.addEventListener('click', () => {
-    const modal = document.getElementById("modal");
-    if (e.target == modal) {
-        loop.value = 1
-        modal.style.display = 'none';
-    }
-});
+$('#confirmTrocaTecla').click(function () {
+    window.pywebview.api.editTecla(i, botname, $('#key-selector').val())
+    $('#editKey').modal('hide')
 
+})
+
+$('#confirmTrocaClick').click(function () {
+    window.pywebview.api.editClick(i, botname, $('#eixo-x-edit').val(), $('#eixo-y-edit').val())
+    $('#editClick').modal('hide')
+
+})
+
+function remove(i, botname) {
+    window.pywebview.api.remove(i, botname)
+}

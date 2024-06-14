@@ -63,6 +63,79 @@ class MyJSAPI:
             webview.windows[0].evaluate_js(js_code)
         except Exception as e:
             print(f"Error sending data to HTML: {e}")
-
+            
+    def commands(self, botname):
+        caminho_arquivo = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(caminho_arquivo, "r") as arquivo:
+            dados_json = json.load(arquivo)
+            for item in dados_json:
+                if item.get("botname") == botname:
+                      with open(item.get("path"), "r") as comands:
+                        dados = json.load(comands)
+                        try:
+                            data_str = json.dumps(dados) 
+                            js_code = f"window.list('{data_str}', '{botname}');"
+                            webview.windows[0].evaluate_js(js_code)
+                        except Exception as e:
+                            print(f"Error sending data to HTML: {e}")
+                          
+    def remove(self, i, botname):
+        caminho_arquivo = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(caminho_arquivo, "r") as arquivo:
+            dados_json = json.load(arquivo)
+            for item in dados_json:
+                if item.get("botname") == botname:
+                      with open(item.get("path"), "r") as comands:
+                        dados = json.load(comands)
+                        if dados:
+                            del dados[int(i)]
+                            with open(item.get("path"), "w") as comands:
+                                json.dump(dados, comands, indent=4)
+                        try:
+                            data_str = json.dumps(dados) 
+                            js_code = f"window.list('{data_str}', '{botname}');"
+                            webview.windows[0].evaluate_js(js_code)
+                        except Exception as e:
+                            print(f"Error sending data to HTML: {e}")
+                            
+    def editTecla(self, i, botname, nova):
+        caminho_arquivo = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(caminho_arquivo, "r") as arquivo:
+            dados_json = json.load(arquivo)
+            for item in dados_json:
+                if item.get("botname") == botname:
+                      with open(item.get("path"), "r") as comands:
+                        dados = json.load(comands)
+                        if dados:
+                            dados[int(i)]['key'] = nova
+                            with open(item.get("path"), "w") as comands:
+                                json.dump(dados, comands, indent=4)
+                        try:
+                            data_str = json.dumps(dados) 
+                            js_code = f"window.list('{data_str}', '{botname}');"
+                            webview.windows[0].evaluate_js(js_code)
+                        except Exception as e:
+                            print(f"Error sending data to HTML: {e}")
+                            
+    def editClick(self, i, botname, x, y):
+        caminho_arquivo = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'json_bots', 'bots.json'))
+        with open(caminho_arquivo, "r") as arquivo:
+            dados_json = json.load(arquivo)
+            for item in dados_json:
+                if item.get("botname") == botname:
+                      with open(item.get("path"), "r") as comands:
+                        dados = json.load(comands)
+                        if dados:
+                            dados[int(i)]['x'] = x
+                            dados[int(i)]['y'] = y
+                            with open(item.get("path"), "w") as comands:
+                                json.dump(dados, comands, indent=4)
+                        try:
+                            data_str = json.dumps(dados) 
+                            js_code = f"window.list('{data_str}', '{botname}');"
+                            webview.windows[0].evaluate_js(js_code)
+                        except Exception as e:
+                            print(f"Error sending data to HTML: {e}")
+                            
     def confirm(self):
         pass

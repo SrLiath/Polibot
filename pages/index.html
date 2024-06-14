@@ -15,8 +15,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery.slim.min.js"></script>
   <script defer src="js/py_api.js"></script>
-  <script defer src="js/script.js"></script>
-
+  <script defer src="js/list.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fontawesome.all.js"></script>
+  <script src="js/sweetalert2.all.min.js"></script>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Reddit+Mono:wght@200..900&display=swap');
@@ -239,20 +241,87 @@
 
 
     <div class="window-buttons">
-      <button class="btn btn-close" id="minimize-btn">
+      <button class="btn btn-function-window" id="minimize-btn">
         <i class="fa fa-window-minimize"></i>
       </button>
-      <button class="btn btn-close" id="expand-btn">
+      <button class="btn btn-function-window" id="expand-btn">
         <i id="fullscreen-icon" class="fas fa-expand"></i>
       </button>
-      <button class="btn btn-close" id="close-btn">
+      <button class="btn btn-function-window" id="close-btn">
         <i class="fas fa-times-circle"></i>
       </button>
 
     </div>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/fontawesome.all.js"></script>
-    <script src="js/sweetalert2.all.min.js"></script>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-list">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel" style="color: white;">Editar Item</h5>
+            <button type="button" class="btn btn-close-list" data-bs-dismiss="modal" style="color:white"
+              aria-label="Close">X</button>
+          </div>
+          <!-- Indicador de carregamento -->
+          <div class="modal-loading">
+            <div class="neon-spinner"></div>
+          </div>
+          <div class="modal-content list-content" id="list">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="editKey" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-list">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel" style="color: white;">Editar Item</h5>
+            <button type="button" class="btn btn-close-list" data-bs-dismiss="modal" style="color:white"
+              aria-label="Close">X</button>
+          </div>
+          <div class="modal-content ">
+            <input type="text" id="key-selector" placeholder="escreva a tecla">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" id="confirmTrocaTecla">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="editClick" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content modal-list">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel" style="color: white;">Editar Item</h5>
+            <button type="button" class="btn btn-close-list" data-bs-dismiss="modal" style="color:white"
+              aria-label="Close">X</button>
+          </div>
+          <div class="modal-content" style="background-color: #1B2029; color: white">
+            <div class="form-group row mt-3">
+              <div class="col">
+                <label for="x-coordinate">Eixo X</label>
+                <input type="number" class="form-control" id="eixo-x-edit" placeholder="X">
+              </div>
+              <div class="col">
+                <label for="y-coordinate">Eixo Y</label>
+                <input type="number" class="form-control" id="eixo-y-edit" placeholder="Y">
+              </div>
+            </div>
+            <p />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" class="btn btn-primary" id="confirmTrocaClick">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 </body>
 
 </html>

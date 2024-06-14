@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "path": "C:\\Users\\guima\\Polibot\\json_bots\\teste.json",
+        "botname": "teste",
+        "loop": 1,
+        "call": {
+            "key": "\\x04"
+        }
+    }
+]

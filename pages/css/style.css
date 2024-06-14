@@ -24,10 +24,47 @@ li button:hover {
   background-color: #444;
 }
 
-.btn-close {
+.btn-function-window {
   color: white
 }
 
 .btn {
   background-color: transparent;
+}
+
+.neon-spinner {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid transparent;
+  border-top-color: rgb(9, 49, 248);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.modal-list {
+  background-color: #1B2029;
+}
+
+.list-content {
+  background-color: #1B2029;
+  color: white;
+  padding-left: 10px;
 }
