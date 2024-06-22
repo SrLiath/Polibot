@@ -112,11 +112,30 @@ window.receiveData = function (data) {
         buttonEdit.appendChild(tagIEdit)
         editBot.appendChild(buttonEdit)
 
+        //botao editar
+
+        //botao share
+
+        var shareBot = document.createElement('td')
+
+        var buttonShare = document.createElement('button')
+        buttonShare.classList.add('btn')
+
+        var tagIShare = document.createElement('i')
+
+        tagIShare.classList.add('fas', 'fa-share')
+        buttonShare.appendChild(tagIShare)
+        shareBot.appendChild(buttonShare)
+
+
+        //botao share
+
         buttonEdit.addEventListener('click', () => {
             var modal = new bootstrap.Modal(document.getElementById('editModal'))
             modal.show()
             window.pywebview.api.commands(bot.botname)
         })
+
         //botao excluir
         var buttonExcluir = document.createElement('button')
         buttonExcluir.classList.add('btn')
@@ -135,6 +154,7 @@ window.receiveData = function (data) {
 
         row.appendChild(nameCell)
         row.appendChild(callCell)
+        row.appendChild(shareBot)
         row.appendChild(editBot)
         row.appendChild(excluirBot)
 
