@@ -5,3 +5,5 @@ pynput
 Windows-Toasts
 pyaudio
 cx_freeze
+pycryptodome
+Pillow
