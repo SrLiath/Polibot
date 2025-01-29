@@ -2,7 +2,7 @@ altgraph==0.17.4
 bottle==0.12.25
 bottle-websocket==0.2.9
 cachetools==5.3.3
-certifi==2024.2.2
+certifi>=2024.07.04
 cffi==1.16.0
 charset-normalizer==3.3.2
 clr-loader==0.2.6
@@ -40,7 +40,7 @@ requests==2.32.3
 six==1.16.0
 SpeechRecognition==3.10.4
 typing_extensions==4.12.0
-urllib3==2.2.1
+urllib3>=2.2.2
 whichcraft==0.6.1
 Windows-Toasts==1.1.1
 winrt-runtime==2.0.1
