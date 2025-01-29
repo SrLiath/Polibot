@@ -63,9 +63,9 @@ Polibot é um RPA (Robotic Process Automation) desenvolvido como projeto de TCC 
 
 ## Licença
 
-Este projeto é licenciado sob a [MIT License](LICENSE).
+Este projeto é licenciado sob a [BUSL-1.1](LICENSE).
 
 ## Contato
 
-Para mais informações, entre em contato pelo e-mail: contato@polibot.com.
+Para mais informações, entre em contato pelo e-mail: baratellarenan@gmail.com ou Santos.jonathan.jj@gmail.com.
 
