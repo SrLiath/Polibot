@@ -63,6 +63,16 @@ Para garantir o desempenho máximo, utilizamos Python para a implementação da 
 3. Commit suas alterações (`git commit -m 'Adicionando nova funcionalidade'`).
 4. Envie um pull request.
 
+## Ferramentas de front
+
+- html5
+- css
+- js
+- `bootstrap v5.3.0`
+- `jquery v3.3.1`
+- `FontAwesome v5.15.3`
+- `SweetAlert2 v11.11.1`
+
 ## Licença
 
 Este projeto é licenciado sob a [BUSL-1.1](LICENSE).
