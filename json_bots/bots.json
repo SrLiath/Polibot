@@ -1,7 +1,7 @@
 [
     {
-        "path": "C:\\Users\\Renan\\Desktop\\Nova pasta (2)\\polibot-python\\json_bots\\Enviar relatorio.json",
-        "botname": "Enviar relatorio",
+        "path": "C:\\Users\\jonathan.silva\\Polibot\\json_bots\\teste.json",
+        "botname": "teste",
         "loop": 1,
         "call": {
             "key": "\\x04"

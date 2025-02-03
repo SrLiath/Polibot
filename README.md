@@ -2,18 +2,16 @@
 
 Polibot é um RPA (Robotic Process Automation) desenvolvido como projeto de TCC em Ciência da Computação. O objetivo é proporcionar uma solução **No Code**, permitindo que qualquer pessoa possa automatizar processos sem necessidade de conhecimento em programação. O sistema é extremamente simplificado e intuitivo, utilizando Inteligência Artificial para validação de exceções e comandos de voz para a execução das automações.
 
-Para garantir o desempenho máximo, utilizamos Python para a implementação da lógica de automação/manutenção e C++ para processos mais complexos e exigentes em termos de desempenho, adquirindo mais velocidade nas operações.
+Para garantir o desempenho máximo, utilizamos Python para a implementação da lógica de automação/manutenção.
 
 ## Características
 
 - **Automação No Code**: Interface simplificada para automação de processos sem necessidade de programação.
-- **Validação de Exceções com IA**: O Polibot analisa e categoriza exceções, tomando decisões inteligentes para corrigir ou notificar o usuário.
 - **Execução de Automação por Voz**: Permite iniciar, pausar e interromper processos automatizados apenas com comandos de voz.
 - **Execução por Teclas de Atalho**: Possibilidade de ativar automações através de teclas de atalho pré-programadas.
 - **Agendamento de Execução**: Permite configurar horários específicos para que as automações sejam executadas automaticamente.
 - **Automatização de Processos**: Reduz tarefas repetitivas e aumenta a eficiência operacional.
 - **Integração com Sistemas**: Conecta-se a diferentes plataformas e aplicações para executar fluxos de trabalho automatizados.
-- **Outras Funções de RPA**: Inclui captura de tela, preenchimento automático de formulários, cliques automáticos e outras funcionalidades essenciais para automação.
 
 ## Requisitos
 

@@ -4,46 +4,9 @@ import os
 from pynput import mouse, keyboard
 import json
 from windows_toasts import Toast, WindowsToaster
+
 import webview
-import pyautogui
-from PIL import Image
-import base64
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
-import os
-import psutil
-from datetime import datetime
 
-def get_mac_address():
-    interfaces = psutil.net_if_addrs()
-    for interface in interfaces.values():
-        for addr in interface:
-            if addr.family == 17: 
-                return addr.address
-    return None
-
-def encrypt_image(image_data, key):
-    cipher = AES.new(key, AES.MODE_CBC)
-    ct_bytes = cipher.encrypt(pad(image_data, AES.block_size))
-    return cipher.iv + ct_bytes  
-
-def capture_and_save_image():
-    screenshot = pyautogui.screenshot()
-    screenshot = screenshot.resize((screenshot.width // 2, screenshot.height // 2))
-    image_bytes = screenshot.tobytes()
-    mac_address = get_mac_address()
-    if mac_address is None:
-        print("Não foi possível obter o endereço MAC.")
-        return
-    additional_number = b"123456" 
-    key_input = mac_address.encode() + additional_number
-    key = key_input[:16]  
-    encrypted_image = encrypt_image(image_bytes, key)
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S") + f"{datetime.now().microsecond}"
-    with open(f"{timestamp}.dat", "wb") as f:
-        f.write(encrypted_image)
-    return f"{timestamp}.dat"
-    
 commands = []
 mouse_listener = None
 keyboard_listener = None
@@ -58,15 +21,13 @@ keyboard_listener = None
 def on_click(x, y, button, pressed):
     global commands
     if pressed:
-        ft = capture_and_save_image()
         command = {
             'type': 'click',
             'x': x,
             'y': y,
             'button': str(button),
             'pressed': pressed,
-            'sleep': 0,
-            'ft': ft
+            'sleep': 0
         }
         commands.append(command)
 

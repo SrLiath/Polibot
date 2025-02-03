@@ -6,7 +6,7 @@ from pyfiles.detect import gravar
 
 class MyJSAPI:
     def close(self):
-        webview.windows[0].destroy()
+        webview.windows[0].hide()
 
     def minimize(self):
         webview.windows[0].minimize()
