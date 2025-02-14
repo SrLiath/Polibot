@@ -21,8 +21,8 @@ def start_window():
     global window
     thread(ouvir_audio)
     thread(key)
-    window = webview.create_window('Polibot', index_file, js_api=js_api, frameless=True)
-    webview.start(debug=True)
+    window = webview.create_window('Polibot', index_file, js_api=js_api, frameless=True, resizable=True)
+    webview.start(debug=False)
 
 
 def hide_window():
