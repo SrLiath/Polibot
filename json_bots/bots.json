@@ -6,5 +6,21 @@
         "call": {
             "key": "\\x04"
         }
+    },
+    {
+        "path": "C:\\Users\\jonathan.silva\\Desktop\\pythonteste\\polibot\\json_bots\\teste.json",
+        "botname": "teste",
+        "loop": 1,
+        "call": {
+            "key": "\\x07"
+        }
+    },
+    {
+        "path": "C:\\Users\\jonathan.silva\\Desktop\\pythonteste\\polibot\\json_bots\\teste.json",
+        "botname": "teste",
+        "loop": 1,
+        "call": {
+            "key": "\\x0b"
+        }
     }
 ]
