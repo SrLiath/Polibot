@@ -14,6 +14,7 @@ import win32process
 import subprocess
 import psutil
 import keyboard as kb
+
 def get_hwnd_from_pid(pid):
     hwnds = []
     def callback(hwnd, _):
@@ -38,7 +39,7 @@ def ativar_janela(program_name):
     hwnd = get_hwnd_from_pid(pid)
     if hwnd:
         try:
-            win32gui.ShowWindow(hwnd, 5)  # SW_SHOW
+            win32gui.ShowWindow(hwnd, 5)
             win32gui.SetForegroundWindow(hwnd)
             time.sleep(0.5)
             return True
@@ -74,7 +75,7 @@ def executar_comandos(filename):
     parar = False
     thread(check)
     print(f'Executando comandos do arquivo: {filename}')
-    
+
     with open(filename, 'r') as file:
         commands = json.load(file)
 
@@ -96,11 +97,21 @@ def executar_comandos(filename):
         return
 
     for _ in range(loop):
-        for command in commands:
+        for i, command in enumerate(commands):
             if parar:
                 break
 
             program = command.get('program')
+            if program and not get_pid_by_name(program):
+                comandos_restantes = len(commands) - i
+                if comandos_restantes >= 3:
+                    notificar("Reiniciando bot", f"Programa '{program}' não está aberto. Faltam {comandos_restantes} comandos.")
+                    print(f"Programa '{program}' não está aberto e ainda faltam {comandos_restantes} comandos. Reiniciando...")
+                    os.execv(sys.executable, [sys.executable] + sys.argv)
+                else:
+                    notificar("Programa ausente", f"'{program}' não está aberto, mas só faltam {comandos_restantes} comandos. Ignorando.")
+                    print(f"Programa '{program}' não está aberto, mas só faltam {comandos_restantes} comandos. Ignorando.")
+
             ativar_janela(program)
 
             tipo = command['type']
@@ -114,7 +125,6 @@ def executar_comandos(filename):
                     else:
                         control.RightClick()
 
-
             elif tipo == 'keypress':
                 if command['pressed']:
                     key = command['key']
@@ -126,10 +136,8 @@ def executar_comandos(filename):
                     else:
                         kb.write(key, delay=0.01)
 
-
     print('Comandos executados com sucesso.')
 
-# ========== Execução ==========
 def main():
     try:
         if args.silent and not args.internal:
@@ -170,7 +178,6 @@ def main():
     if args.internal:
         input("Pressione Enter para sair...")
 
-# roda aqui
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--comandos', required=True)

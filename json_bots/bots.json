@@ -22,5 +22,13 @@
         "call": {
             "key": "\\x0b"
         }
+    },
+    {
+        "path": "C:\\Users\\jonathan.silva\\Desktop\\pythonteste\\polibot\\json_bots\\abc.json",
+        "botname": "abc",
+        "loop": 1,
+        "call": {
+            "key": "\\x06"
+        }
     }
 ]
