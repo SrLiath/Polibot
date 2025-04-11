@@ -72,71 +72,72 @@ def notificar(titulo, mensagem):
 
 def executar_comandos(filename):
     global parar
-    parar = False
-    thread(check)
-    print(f'Executando comandos do arquivo: {filename}')
+    while True:
+        parar = False
+        thread(check)
+        with open(filename, 'r') as file:
+            commands = json.load(file)
 
-    with open(filename, 'r') as file:
-        commands = json.load(file)
+        botname = os.path.basename(filename).split('.')[0]
+        bot_dir = os.path.dirname(os.path.abspath(filename))
+        bots_path = os.path.join(bot_dir, 'bots.json')
+        with open(bots_path, 'r') as bots:
+            file = json.load(bots)
 
-    botname = os.path.basename(filename).split('.')[0]
-    bot_dir = os.path.dirname(os.path.abspath(filename))
-    bots_path = os.path.join(bot_dir, 'bots.json')
-    with open(bots_path, 'r') as bots:
-        file = json.load(bots)
-
-    loop = None
-    for bot in file:
-        if bot['botname'] == botname:
-            loop = bot['loop']
-            break
-
-    if loop is None:
-        notificar("Bot não encontrado", f"O bot '{botname}' não está cadastrado em bots.json")
-        print('Bot não encontrado.')
-        return
-
-    for _ in range(loop):
-        for i, command in enumerate(commands):
-            if parar:
+        loop = None
+        for bot in file:
+            if bot['botname'] == botname:
+                loop = bot['loop']
                 break
 
-            program = command.get('program')
-            if program and not get_pid_by_name(program):
-                comandos_restantes = len(commands) - i
-                if comandos_restantes >= 3:
-                    notificar("Reiniciando bot", f"Programa '{program}' não está aberto. Faltam {comandos_restantes} comandos.")
-                    print(f"Programa '{program}' não está aberto e ainda faltam {comandos_restantes} comandos. Reiniciando...")
-                    os.execv(sys.executable, [sys.executable] + sys.argv)
-                else:
-                    notificar("Programa ausente", f"'{program}' não está aberto, mas só faltam {comandos_restantes} comandos. Ignorando.")
-                    print(f"Programa '{program}' não está aberto, mas só faltam {comandos_restantes} comandos. Ignorando.")
+        if loop is None:
+            notificar("Bot não encontrado", f"O bot '{botname}' não está cadastrado em bots.json")
+            return
 
-            ativar_janela(program)
+        reiniciar = False
 
-            tipo = command['type']
+        for _ in range(loop):
+            for i, command in enumerate(commands):
+                if parar:
+                    return
 
-            if tipo == 'click':
-                if command['pressed']:
-                    auto.MoveTo(command['x'], command['y'])
-                    control = auto.ControlFromPoint(command['x'], command['y'])
-                    if command['button'] == 'Button.left':
-                        control.Click()
+                program = command.get('program')
+                if program and not get_pid_by_name(program):
+                    comandos_restantes = len(commands) - i
+                    if comandos_restantes >= 3:
+                        notificar("Reiniciando", f"'{program}' não está aberto. Reiniciando automação.")
+                        reiniciar = True
+                        break
                     else:
-                        control.RightClick()
+                        notificar("Programa ausente", f"'{program}' não está aberto. Ignorando.")
+                        continue
 
-            elif tipo == 'keypress':
-                if command['pressed']:
-                    key = command['key']
-                    special_keys = {
-                        'enter', 'tab', 'esc', 'backspace', 'delete', 'space'
-                    }
-                    if key.lower() in special_keys:
-                        kb.send(key.lower())
-                    else:
-                        kb.write(key, delay=0.01)
+                ativar_janela(program)
 
-    print('Comandos executados com sucesso.')
+                tipo = command['type']
+
+                if tipo == 'click':
+                    if command['pressed']:
+                        auto.MoveTo(command['x'], command['y'])
+                        control = auto.ControlFromPoint(command['x'], command['y'])
+                        if command['button'] == 'Button.left':
+                            control.Click()
+                        else:
+                            control.RightClick()
+
+                elif tipo == 'keypress':
+                    if command['pressed']:
+                        key = command['key']
+                        if key.lower() in {'enter', 'tab', 'esc', 'backspace', 'delete', 'space'}:
+                            kb.send(key.lower())
+                        else:
+                            kb.write(key, delay=0.01)
+
+            if reiniciar:
+                break
+
+        if not reiniciar:
+            break
 
 def main():
     try:
