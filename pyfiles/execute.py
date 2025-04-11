@@ -72,7 +72,8 @@ def notificar(titulo, mensagem):
 
 def executar_comandos(filename):
     global parar
-    while True:
+    tentativas = 0
+    while tentativas <= 4:
         parar = False
         thread(check)
         with open(filename, 'r') as file:
@@ -105,7 +106,7 @@ def executar_comandos(filename):
                 if program and not get_pid_by_name(program):
                     comandos_restantes = len(commands) - i
                     if comandos_restantes >= 3:
-                        notificar("Reiniciando", f"'{program}' não está aberto. Reiniciando automação.")
+                        notificar("Reiniciando", f"'{program}' não está aberto. Tentativa {tentativas + 1}/5")
                         reiniciar = True
                         break
                     else:
@@ -136,8 +137,14 @@ def executar_comandos(filename):
             if reiniciar:
                 break
 
-        if not reiniciar:
+        if reiniciar:
+            tentativas += 1
+            continue
+        else:
             break
+
+    if tentativas > 4:
+        notificar("Erro", "Mais de 4 falhas. Automação cancelada.")
 
 def main():
     try:
