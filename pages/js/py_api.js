@@ -125,7 +125,7 @@ window.receiveData = function (data) {
 
         tagIShare.classList.add('fas', 'fa-share')
         buttonShare.appendChild(tagIShare)
-        shareBot.appendChild(buttonShare)
+        //shareBot.appendChild(buttonShare)
 
 
         //botao share

@@ -30,24 +30,25 @@ window.list = function (dataNoJson, botname) {
                     <li style="display: flex; justify-content: space-between; align-items: center;">
                         Click  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; x: ${data[i].x}, y: ${data[i].y}
                         <div>
-                            <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo após a execução deste comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
                             <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar Comando" onclick="editClick('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
                             <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Apagar comando" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
                         </div>
                     </li>
                 `);
+            // linha 33 tinha este conteudo, apenas para deixar gravado caso precise, <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo após a execução deste comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
+
                 break;
             case 'keypress':
                 $('#list').append(`
                     <li style="display: flex; justify-content: space-between; align-items: center;">
                         Tecla  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${data[i].key}
                         <div>
-                            <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo para executar o próximo comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
                             <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar comando" onclick="editTecla('${i}', '${botname}')"><i class="fa fa-edit"></i></button>
                             <button class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Apagar comando" onclick="remove('${i}', '${botname}')"><i class="fa fa-trash"></i></button>
                         </div>
                     </li>
                 `);
+                // linha depois da 45 estava isso,                             <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Clique para adicionar 1 segundo para executar o próximo comando" onclick="addTime('${i}', '${botname}')"><i class="fa fa-plus"></i></button>
                 break;
             default:
                 break;
