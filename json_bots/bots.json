@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "path": "C:\\Users\\jonathan.silva\\polibot\\json_bots\\dsad.json",
+        "botname": "dsad",
+        "loop": 1,
+        "call": {
+            "key": "\\x04"
+        }
+    }
+]

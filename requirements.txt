@@ -8,3 +8,4 @@ cx_freeze
 pycryptodome
 Pillow
 pystray
+uiautomation

@@ -4,3 +4,4 @@ json_bots
 build
 json_bots/*
 env
+output/
