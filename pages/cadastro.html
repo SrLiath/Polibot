@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CliqFácil - Acesso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #1a1e23;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background-color: #00b8d4;
+            border-radius: 50%;
+            margin-right: 1rem;
+            position: relative;
+        }
+
+        .logo::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #1a1e23;
+            border-radius: 50%;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .form-container {
+            background-color: #232830;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #b0bec5;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #1a1e23;
+            border: 1px solid #2c3440;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #00b8d4;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #00b8d4;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #00a0b8;
+        }
+
+        .toggle-link {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #b0bec5;
+        }
+
+        .toggle-link a {
+            color: #00b8d4;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .toggle-link a:hover {
+            text-decoration: underline;
+        }
+
+        #register-form {
+            display: none;
+        }
+
+        .form-slide {
+            transition: all 0.3s ease;
+        }
+
+        .slide-out {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .slide-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d-none {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo"></div>
+            <div class="logo-text">CliqFácil</div>
+        </div>
+
+        <div class="form-container">
+            <form id="login-form" class="form-slide slide-in">
+                <h1>Acesso ao Sistema</h1>
+
+                <div class="mb-3" style="margin-bottom: 1.4rem;">
+                    <label for="chave" class="form-label" style="color:white;">Chave de Acesso</label>
+                    <input type="text" class="form-control" id="chave" placeholder="Digite a chave de acesso" required>
+                </div>
+                <div id="erroChave" class="text-danger d-none">Chave inválida!</div>
+
+                <button type="submit" class="btn">Entrar</button>
+
+                <div class="toggle-link">
+                    Não tem uma conta? <a id="show-register">Cadastre-se</a>
+                </div>
+            </form>
+
+            <form id="register-form" class="form-slide">
+                <h1>Criar Conta</h1>
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                  </div>
+                <div class="form-group">
+                    <label for="register-email">E-mail</label>
+                    <input type="email" id="register-email" name="email" placeholder="Seu e-mail" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Informe seu telefone:">
+                  </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
+
+                <div class="toggle-link">
+                    Já tem uma conta? <a id="show-login">Fazer login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const showRegisterLink = document.getElementById('show-register');
+        const showLoginLink = document.getElementById('show-login');
+
+        // Função para alternar entre os formulários com animação
+        function toggleForms(showForm, hideForm) {
+            // Esconde o formulário atual
+            hideForm.classList.add('slide-out');
+            hideForm.classList.remove('slide-in');
+            registerForm.reset()
+            loginForm.reset()
+            erroChave.classList.add('d-none');
+
+            // Após a animação de saída, mostra o outro formulário
+            setTimeout(() => {
+                hideForm.style.display = 'none';
+                showForm.style.display = 'block';
+
+                // Força um reflow para que a animação funcione
+                void showForm.offsetWidth;
+
+                // Anima a entrada do novo formulário
+                showForm.classList.add('slide-in');
+                showForm.classList.remove('slide-out');
+            }, 300);
+        }
+
+        // Event listeners
+        showRegisterLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleForms(registerForm, loginForm);
+        });
+
+        showLoginLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            toggleForms(loginForm, registerForm);
+        });
+
+        const chaveInput = document.getElementById('chave');
+        const erroChave = document.getElementById('erroChave');
+
+        const CHAVE_FIXA = '12345KEY';
+
+        // Prevenir envio dos formulários (para demonstração) //QUANDO CLICAR EM ENTRAR ELE VAI PARA O SISTEMA
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (chaveInput.value !== CHAVE_FIXA) {
+                erroChave.classList.remove('d-none');
+                return;
+            }
+
+            erroChave.classList.add('d-none');
+
+            window.location.href = 'index.html'
+        });
+
+
+
+
+        const email = document.getElementById("register-email");
+
+
+
+
+        registerForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            alert('E-mail enviado com sucesso! Acessar o e-mail: ' + email.value);
+            toggleForms(loginForm, registerForm);
+        });
+    </script>
+</body>
+
+</html>

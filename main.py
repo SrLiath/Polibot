@@ -11,7 +11,7 @@ from pyfiles.js_api import MyJSAPI
 from pyfiles.listen_key import key
 
 page_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'pages'))
-index_file = f'file://{os.path.join(page_dir, "index.html")}'
+index_file = f'file://{os.path.join(page_dir, "cadastro.html")}'
 js_api = MyJSAPI()
 
 window = None  
