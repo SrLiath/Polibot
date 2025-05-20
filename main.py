@@ -21,7 +21,7 @@ def start_window():
     global window
     thread(ouvir_audio)
     thread(key)
-    window = webview.create_window('CliqFácil', index_file, js_api=js_api, frameless=True, resizable=True)
+    window = webview.create_window('CliqFácil', index_file, js_api=js_api, frameless=True, resizable=True, height=700)
     webview.start(debug=False)
 
 
