@@ -1,10 +1,1 @@
-[
-    {
-        "path": "C:\\renan\\polibot\\polibot_new\\json_bots\\teste.json",
-        "botname": "teste",
-        "loop": 1,
-        "call": {
-            "voice": "chamar"
-        }
-    }
-]
+[]
