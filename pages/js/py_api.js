@@ -265,7 +265,8 @@ function iniciarBot() {
         headers = {
             "Option": 1,
             "Name": vozNomeBot,
-            "Voice": vozChamada
+            "Voice": vozChamada,
+            "Loop": 1
         }
     }
 

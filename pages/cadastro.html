@@ -42,23 +42,6 @@
             position: relative;
         }
 
-        /* .logo::before {
-            content: "";
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #1a1e23;
-            border-radius: 50%;
-            top: 10px;
-            left: 10px;
-        }
-
-        .logo-text {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ffffff;
-        } */
-
         .form-container {
             background-color: #232830;
             border-radius: 8px;
@@ -169,119 +152,33 @@
         <div class="form-container">
             <form id="login-form" class="form-slide slide-in">
                 <h1>Acesso ao Sistema</h1>
-
                 <div class="mb-3" style="margin-bottom: 1.4rem;">
                     <label for="chave" class="form-label" style="color:white;">Chave de Acesso</label>
                     <input type="text" class="form-control" id="chave" placeholder="Digite a chave de acesso" required>
                 </div>
                 <div id="erroChave" class="text-danger d-none">Chave inválida!</div>
-
                 <button type="submit" class="btn">Entrar</button>
-
-                <div class="toggle-link">
-                    Não tem uma conta? <a id="show-register">Cadastre-se</a>
-                </div>
-            </form>
-
-            <form id="register-form" class="form-slide">
-                <h1>Criar Conta</h1>
-
-                <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Seu nome">
-                  </div>
-                <div class="form-group">
-                    <label for="register-email">E-mail</label>
-                    <input type="email" id="register-email" name="email" placeholder="Seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="Informe seu telefone:">
-                  </div>
-
-                <button type="submit" class="btn">Cadastrar</button>
-
-                <div class="toggle-link">
-                    Já tem uma conta? <a id="show-login">Fazer login</a>
-                </div>
             </form>
         </div>
     </div>
 
     <script>
-        // Elementos do DOM
+
         const loginForm = document.getElementById('login-form');
-        const registerForm = document.getElementById('register-form');
-        const showRegisterLink = document.getElementById('show-register');
-        const showLoginLink = document.getElementById('show-login');
-
-        // Função para alternar entre os formulários com animação
-        function toggleForms(showForm, hideForm) {
-            // Esconde o formulário atual
-            hideForm.classList.add('slide-out');
-            hideForm.classList.remove('slide-in');
-            registerForm.reset()
-            loginForm.reset()
-            erroChave.classList.add('d-none');
-
-            // Após a animação de saída, mostra o outro formulário
-            setTimeout(() => {
-                hideForm.style.display = 'none';
-                showForm.style.display = 'block';
-
-                // Força um reflow para que a animação funcione
-                void showForm.offsetWidth;
-
-                // Anima a entrada do novo formulário
-                showForm.classList.add('slide-in');
-                showForm.classList.remove('slide-out');
-            }, 300);
-        }
-
-        // Event listeners
-        showRegisterLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            toggleForms(registerForm, loginForm);
-        });
-
-        showLoginLink.addEventListener('click', function (e) {
-            e.preventDefault();
-            toggleForms(loginForm, registerForm);
-        });
-
         const chaveInput = document.getElementById('chave');
         const erroChave = document.getElementById('erroChave');
-
         const CHAVE_FIXA = '12345KEY';
 
-        // Prevenir envio dos formulários (para demonstração) //QUANDO CLICAR EM ENTRAR ELE VAI PARA O SISTEMA
         loginForm.addEventListener('submit', function (e) {
             e.preventDefault();
-
             if (chaveInput.value !== CHAVE_FIXA) {
                 erroChave.classList.remove('d-none');
                 return;
             }
-
             erroChave.classList.add('d-none');
-
             window.location.href = 'index.html'
         });
 
-
-
-
-        const email = document.getElementById("register-email");
-
-
-
-
-        registerForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            alert('E-mail enviado com sucesso! Acessar o e-mail: ' + email.value);
-            toggleForms(loginForm, registerForm);
-        });
     </script>
 </body>
 
