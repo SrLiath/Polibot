@@ -109,6 +109,7 @@ window.receiveData = function (data) {
         var tagIEdit = document.createElement('i')
 
         tagIEdit.classList.add('fas', 'fa-edit')
+        tagIEdit.style.color = "white"
         buttonEdit.appendChild(tagIEdit)
         editBot.appendChild(buttonEdit)
 
@@ -124,8 +125,19 @@ window.receiveData = function (data) {
         var tagIShare = document.createElement('i')
 
         tagIShare.classList.add('fas', 'fa-share')
+        tagIShare.style.color = "white"
         buttonShare.appendChild(tagIShare)
-        //shareBot.appendChild(buttonShare)
+        shareBot.appendChild(buttonShare)
+
+        //////////botao import
+
+        // var tdImport = document.createElement('td')
+        // var buttonImport = document.createElement('button')
+        // buttonImport.classList.add('btn')
+        // var tagIImport = document.createElement('i')
+        // tagIImport.classList.add('fas', 'fa-file-import')
+        // buttonImport.appendChild(tagIImport)
+        // tdImport.appendChild(buttonImport)
 
 
         //botao share
@@ -154,6 +166,7 @@ window.receiveData = function (data) {
 
         row.appendChild(nameCell)
         row.appendChild(callCell)
+        // row.appendChild(tdImport)
         row.appendChild(shareBot)
         row.appendChild(editBot)
         row.appendChild(excluirBot)
@@ -265,7 +278,8 @@ function iniciarBot() {
         headers = {
             "Option": 1,
             "Name": vozNomeBot,
-            "Voice": vozChamada
+            "Voice": vozChamada,
+            "Loop": 1
         }
     }
 
